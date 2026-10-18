@@ -1,0 +1,81 @@
+# Majestic Essence — Authentic Indian Spices & Culinary Herbs
+> Majestic Essence brings the richness of India's traditional herbs, spices, and culinary ingredients to kitchens worldwide. Inspired by ancient Indian Lipi (manuscript) traditions, carefully selected for distinctive character, aroma, flavour, appearance, and everyday versatility.
+
+## Organization & Contact
+- **Brand**: Majestic Essence
+- **Tagline**: The Essence of Authentic Quality. Carefully Chosen. Thoughtfully Crafted. Made to Be Remembered.
+- **Founder & Owner**: Pranav Pratap Singh
+- **Official Website**: https://majestic-essence.com
+- **Fulfillment & Roasting Hub**: Aligarh, Uttar Pradesh – 202001, India
+- **WhatsApp & Direct Line**: +91 7217362416 (Direct WhatsApp concierge link: https://wa.me/917217362416)
+- **Official Email**: majesticessence30@gmail.com
+- **WebMCP Action Manifest**: https://majestic-essence.com/mcp-actions.json
+
+## Complete Website Architecture & Legal Registry
+- [Majestic Essence Home](https://majestic-essence.com/): Grand Showcase with animated Lipi calligraphy, hero mandala, and Bukanu flagship spotlight.
+- [Bukanu Heritage Digestive Blend](https://majestic-essence.com/bukanu.html): Royal Awadhi & Mughal digestive spice blend, botanical composition, culinary pairings, and bulk orders.
+- [The Spice Collection](https://majestic-essence.com/spices.html): The Complete Spice Collection catalog featuring 3D card tilt, category filters, and sensory notes.
+- [Moringa Leaf Powder](https://majestic-essence.com/moringa.html): 01 Kaveri Basin Moringa Leaf Powder dedicated product chapter & bulk inquiry.
+- [Ajwain Carom Seeds](https://majestic-essence.com/ajwain.html): 02 Saurashtra Ajwain Carom Seeds dedicated product chapter & bulk inquiry.
+- [Kalonji Nigella Seeds](https://majestic-essence.com/kalonji.html): 03 Malwa Regur Kalonji Nigella Seeds dedicated product chapter & bulk inquiry.
+- [Shade-Dried Curry Leaves](https://majestic-essence.com/curry-leaves.html): 04 Western Ghats Shade-Dried Curry Leaves dedicated product chapter & bulk inquiry.
+- [Kasuri Methi Fenugreek](https://majestic-essence.com/kasuri-methi.html): 05 Nagaur Sun-Cured Kasuri Methi dedicated product chapter & bulk inquiry.
+- [Our Story & Heritage](https://majestic-essence.com/ourstory): Generational heritage, culinary philosophy, and 4-stage purity protocol.
+- [Founder & Terroir Stewardship](https://majestic-essence.com/founder): Founder Pranav Pratap Singh's dedication, grower alliances, and quality pledge.
+- [Culinary Chronicles Blog](https://majestic-essence.com/blog): Culinary Journal & Spice Chronicles: Ancient Indian botanical wisdom, Bukanu alchemy, and terroir harvesting.
+- [Contact & Concierge Desk](https://majestic-essence.com/contact): Sample kit request portal, direct inquiry form with automatic product preselection, and WhatsApp QR desk.
+- [Privacy Policy](https://majestic-essence.com/privacy): DPDP Act 2023 & GDPR aligned customer privacy, encryption, and zero third-party data trading.
+- [Terms of Service](https://majestic-essence.com/terms): 100% Quality & Purity Guarantee, FSSAI compliance, ordering policies, and Aligarh legal jurisdiction.
+- [Shipping & Delivery](https://majestic-essence.com/shipping): Pan-India logistics, 3-5 day express delivery, moisture-barrier packaging, and real-time WhatsApp tracking.
+- [FAQ & Botanical Purity Guide](https://majestic-essence.com/faq): Authoritative knowledge base covering terroir origins, shade-drying preservation, home kitchen storage, and FSSAI safety.
+
+## Core Product Portfolio (Flagship Blend & The Five Treasures)
+
+### ★ Flagship: Bukanu (बुंकनू / भुगना) — Traditional Herbal Digestive Blend
+- **Form**: 100g / 250g Net Wt Heritage Roasted Herbal Formulation
+- **Character**: Distinctive warming aroma, savoury-tangy depth, digestive herbal resonance with signature Majestic Essence character.
+- **Historical Heritage**: Inspired by ancient Awadhi and Northern Indian lipi manuscripts; traditionally savoured with ghee, parathas, khichdi, and curd.
+- **Crafting Process**: Hand-selected carminative seeds, black salt (kala namak), asafoetida (hing), dry ginger (sonth), cumin, ajwain, and wild herbs slow-roasted on mild flame to release volatile oils before artisanal stone-grinding.
+- **Culinary Applications**: Everyday accompaniment with roti, paratha, dal-chawal; seasoning for chaat, salads, raita; post-meal digestive pinch.
+
+### 01 — Moringa Leaf Powder (सहजन पत्र)
+- **Form**: 100g Net Wt Fine Emerald Powder
+- **Character**: Naturally earthy, smooth texture, nutrient-dense botanical superfood.
+- **Terroir Origin**: Kaveri river basin, Tamil Nadu (mineral-rich red loamy soil, abundant tropical sun).
+- **Culinary Applications**: Smoothies, shakes, soups, dals, curries, chutneys, warm herbal infusions.
+
+### 02 — Ajwain / Carom Seeds (अजवायन)
+- **Form**: 100g Net Wt Whole Selected Seeds
+- **Character**: Bold aroma, warm pungent flavor, high natural thymol content.
+- **Terroir Origin**: Saurashtra, Gujarat (calcareous loamy coastal silt, intense sun).
+- **Culinary Applications**: Parathas, puris, pakoras, savoury doughs, snacks, tempering (tadka).
+
+### 03 — Kalonji / Black Cumin / Nigella Sativa (कलौंजी)
+- **Form**: 100g Net Wt Whole Selected Black Seeds
+- **Character**: Lustrous jet-black angular seeds, toasted nutty flavor with oregano-onion notes.
+- **Terroir Origin**: Malwa Plateau, Madhya Pradesh (deep fertile black cotton regur soil).
+- **Culinary Applications**: Naan, tandoori breads, pickles, dals, vegetable curries.
+
+### 04 — Dried Curry Leaves / Kadi Patta (कढ़ी पत्ता)
+- **Form**: 100g Net Wt Gently Shade-Dried Whole Leaves
+- **Character**: Forest green hue, high pinene and caryophyllene essential oils, immediate crackling aroma when tempered in hot ghee/oil.
+- **Terroir Origin**: Western Ghats, Kerala & Karnataka (humid tropical laterite, lush mountain canopies).
+- **Culinary Applications**: Tadka, sambhar, rasam, chutneys, poha, upma, rice preparations.
+
+### 05 — Kasuri Methi / Kasturi Methi / Fenugreek Leaves (कसूरी मेथी / कस्तूरी मेथी)
+- **Form**: 100g Net Wt Sun-Cured Crumbly Leaves
+- **Character**: Sweet-bitter herbaceous fragrance, sotolon-rich volatile aromatics.
+- **Terroir Origin**: Nagaur, Rajasthan (arid oasis terroir)
+- **Also Known As**: Kasturi Methi (widely searched Hindi/Hinglish colloquial name) (sandy arid alluvial soil, desert sun, cool winter nights).
+- **Culinary Applications**: North Indian gravies, butter chicken, dal makhani, parathas, paneer curries, methi thepla.
+
+## Trust, Fulfillment & Quality Guarantees
+- **100% Purity Guarantee**: If any product does not meet expectations upon opening, customers receive an immediate free replacement or refund via WhatsApp Concierge (+91 7217362416).
+- **Zero Chemical Additives**: No artificial colors (no metanil yellow, no Sudan dyes), no synthetic anti-caking agents, no MSG, no irradiation, no ETO sterilisation.
+- **Natural Shade-Drying**: Avoids commercial 80°C machine heat dehydration to protect natural chlorophyll and delicate herbal terpenes.
+- **Triple-Layer Barrier Packaging**: Heat-sealed food-grade aluminum foil barrier pouches that lock out humidity, air, and UV light.
+- **Dispatch**: Orders are packed by hand and dispatched from Aligarh within 24 hours. Free pan-India delivery on orders above ₹499.
+
+## Upcoming Product Lineage (In Active Sourcing)
+- **Single-Origin Idukki Green Elaichi (Cardamom / छोटी इलायची)**: High-altitude shade-grown green cardamom pods rich in cineole and terpinyl acetate aromatics.
+- **Royal Indian Chai Masala (चाय मसाला)**: Whole roasted artisanal tea spice formulation featuring dried ginger (sonth), green cardamom (elaichi), black pepper, and cinnamon.

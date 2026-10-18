@@ -1,0 +1,5553 @@
+/* ============================================================
+   MAJESTIC ESSENCE — Indian Scripture-Inspired Design System
+   Cinzel Decorative + Outfit + Noto Serif Devanagari
+   Ancient manuscript aesthetic with animated scroll reveals
+   ============================================================ */
+
+/* --- Tokens --- */
+:root {
+  /* Color — Ancient manuscript palette */
+  --c-bg:             #0E0A05;
+  --c-bg-warm:        #1C1208;
+  --c-parchment:      #F5ECD7;
+  --c-parchment-dark: #E8D9B8;
+  --c-gold:           #C4860B;
+  --c-gold-light:     #D4A832;
+  --c-gold-dim:       rgba(196, 134, 11, 0.12);
+  --c-gold-glow:      rgba(212, 168, 50, 0.15);
+  --c-saffron:        #E8A935;
+  --c-terracotta:     #B85C38;
+  --c-bark:           #3A2A1A;
+  --c-text:           #F5ECD7;
+  --c-text-dim:       rgba(245, 236, 215, 0.78);
+  --c-text-muted:     rgba(245, 236, 215, 0.65);
+  --c-border:         rgba(196, 134, 11, 0.2);
+  --c-border-strong:  rgba(196, 134, 11, 0.4);
+  --c-shadow:         rgba(0, 0, 0, 0.3);
+  --c-overlay:        rgba(14, 10, 5, 0.7);
+
+  /* Rich Indian Spice Spectrum Tokens */
+  --spice-saffron:       #F48C06;
+  --spice-saffron-glow:  rgba(244, 140, 6, 0.22);
+  --spice-amber:         #E85D04;
+  --spice-turmeric:      #FFB703;
+  --spice-emerald:       #1B4332;
+  --spice-emerald-glow:  rgba(45, 106, 79, 0.28);
+  --spice-jade:          #2D6A4F;
+  --spice-leaf:          #40916C;
+  --spice-ruby:          #9E2A2B;
+  --spice-ruby-glow:     rgba(158, 42, 43, 0.25);
+  --spice-terracotta:    #C84B31;
+  --spice-crimson:       #67000B;
+  --spice-plum:          #2B0938;
+  --spice-plum-glow:     rgba(74, 25, 66, 0.3);
+  --spice-indigo:        #1A162B;
+  --spice-ochre:         #C87D2A;
+  --spice-sand:          #E9C46A;
+  --spice-cardamom:      #0F382A;
+
+  /* Typography */
+  --ff-display:     'Cinzel Decorative', 'Cinzel', 'Noto Serif Devanagari', serif;
+  --ff-heading:     'Cinzel', 'Noto Serif Devanagari', serif;
+  --ff-body:        'Outfit', 'Noto Serif Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --ff-devanagari:  'Noto Serif Devanagari', 'Martel', serif;
+  --f-scripture:    'Noto Serif Devanagari', 'Martel', serif;
+
+  --fs-hero:      clamp(2.8rem, 8vw, 7rem);
+  --fs-h1:        clamp(2rem, 4.5vw, 3.8rem);
+  --fs-h2:        clamp(1.6rem, 3.5vw, 2.8rem);
+  --fs-h3:        clamp(1.2rem, 2vw, 1.6rem);
+  --fs-body:      clamp(0.95rem, 1.05vw, 1.0625rem);
+  --fs-body-lg:   clamp(1.05rem, 1.2vw, 1.2rem);
+  --fs-small:     0.8125rem;
+  --fs-caption:   0.75rem;
+  --fs-label:     0.6875rem;
+
+  /* Spacing */
+  --sp-section:   clamp(6rem, 12vh, 10rem);
+  --sp-gap:       clamp(1.5rem, 3vw, 3rem);
+  --sp-page:      clamp(1.25rem, 5vw, 4rem);
+
+  /* Layout */
+  --max-w:        1200px;
+  --nav-h:        72px;
+
+  /* Radius */
+  --r-sm:  4px;
+  --r-md:  8px;
+  --r-lg:  12px;
+
+  /* Easing */
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--c-text);
+  background-color: var(--c-bg);
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol { list-style: none; }
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* --- Accessibility: Skip Link & Focus Indicators (WCAG 2.2 Level AA) --- */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 1.5rem;
+  background: var(--c-gold);
+  color: #0E0A05;
+  font-family: var(--ff-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--r-sm);
+  z-index: 99999;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 168, 50, 0.4);
+  transition: top 0.2s var(--ease-out-expo);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 1.5rem;
+  outline: 3px solid var(--c-parchment);
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-gold-light);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Utility --- */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-page);
+}
+
+.display-text {
+  font-family: var(--ff-heading);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.section-label {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--c-gold);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.section-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1.2rem;
+  height: 1px;
+  background: var(--c-gold);
+}
+
+/* --- Grain Overlay --- */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* --- Particle Canvas --- */
+#particleCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--sp-page);
+  transition: background 0.5s var(--ease-out-expo), border-color 0.5s var(--ease-out-expo);
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: rgba(14, 10, 5, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--c-border);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 10;
+}
+
+.nav__logo-icon {
+  height: 28px;
+  width: auto;
+  filter: brightness(1.2);
+}
+
+.nav__logo-text {
+  font-family: var(--ff-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--c-gold);
+}
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__links a {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--c-text-dim);
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--c-gold);
+  transition: width 0.4s var(--ease-out-expo);
+}
+
+.nav__links a:hover {
+  color: var(--c-gold);
+}
+
+.nav__links a:hover::after {
+  width: 100%;
+}
+
+.nav__link-bukanu {
+  color: var(--c-gold-light) !important;
+  position: relative;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 8px rgba(200, 140, 40, 0.3);
+}
+
+.nav__link-bukanu:hover {
+  text-shadow: 0 0 16px rgba(200, 140, 40, 0.7);
+}
+
+/* Mobile toggle */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  z-index: 10;
+}
+
+.nav__toggle span {
+  display: block;
+  height: 1.5px;
+  background: var(--c-gold);
+  border-radius: 2px;
+  transition: transform 0.4s var(--ease-out-expo), opacity 0.3s;
+}
+
+.nav__toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav__toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu */
+.nav__mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(14, 10, 5, 0.97);
+  backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease-out-expo), visibility 0.5s;
+}
+
+.nav__mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav__mobile-menu a {
+  font-family: var(--ff-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--c-text-dim);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav__mobile-menu a:hover {
+  color: var(--c-gold);
+  transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .nav__toggle { display: flex; }
+}
+
+
+/* ============================================================
+   HERO — Ancient Manuscript Opening
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(196, 134, 11, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(184, 92, 56, 0.04) 0%, transparent 50%),
+    var(--c-bg);
+  z-index: 2;
+}
+
+.hero__manuscript-border {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero__border-svg {
+  position: absolute;
+  width: 100%;
+  color: var(--c-gold);
+  opacity: 0.3;
+}
+
+.hero__border-svg:first-child {
+  top: 0;
+}
+
+/* Ornament path draw animation */
+.ornament-path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: drawPath 3s var(--ease-out-expo) forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes drawPath {
+  to { stroke-dashoffset: 0; }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 5;
+  padding: 2rem;
+}
+
+/* Sanskrit characters */
+.hero__sanskrit {
+  font-family: var(--ff-devanagari);
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  color: var(--c-gold);
+  opacity: 0;
+  letter-spacing: 0.8em;
+  margin-bottom: 2rem;
+  animation: fadeFloat 2s var(--ease-out-expo) forwards;
+  animation-delay: 0.3s;
+}
+
+.sanskrit-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: charFadeIn 0.8s var(--ease-out-expo) forwards;
+}
+
+.sanskrit-char[data-delay="0"] { animation-delay: 0.4s; }
+.sanskrit-char[data-delay="1"] { animation-delay: 0.6s; }
+.sanskrit-char[data-delay="2"] { animation-delay: 0.8s; }
+.sanskrit-char[data-delay="3"] { animation-delay: 1s; }
+
+@keyframes charFadeIn {
+  to {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeFloat {
+  to { opacity: 1; }
+}
+
+/* Hero title — character-by-character reveal */
+.hero__title {
+  font-family: var(--ff-display);
+  font-size: var(--fs-hero);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.12em;
+  color: var(--c-parchment);
+  margin-bottom: 1.5rem;
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__title-line--2 {
+  color: var(--c-gold);
+  font-size: 0.7em;
+  letter-spacing: 0.3em;
+  margin-top: 0.3em;
+}
+
+.char-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px) rotateX(40deg);
+  animation: charReveal 0.8s var(--ease-out-expo) forwards;
+}
+
+/* Stagger character animations */
+.hero__title-line--1 .char-reveal:nth-child(1) { animation-delay: 0.8s; }
+.hero__title-line--1 .char-reveal:nth-child(2) { animation-delay: 0.88s; }
+.hero__title-line--1 .char-reveal:nth-child(3) { animation-delay: 0.96s; }
+.hero__title-line--1 .char-reveal:nth-child(4) { animation-delay: 1.04s; }
+.hero__title-line--1 .char-reveal:nth-child(5) { animation-delay: 1.12s; }
+.hero__title-line--1 .char-reveal:nth-child(6) { animation-delay: 1.2s; }
+.hero__title-line--1 .char-reveal:nth-child(7) { animation-delay: 1.28s; }
+.hero__title-line--1 .char-reveal:nth-child(8) { animation-delay: 1.36s; }
+
+.hero__title-line--2 .char-reveal:nth-child(1) { animation-delay: 1.5s; }
+.hero__title-line--2 .char-reveal:nth-child(2) { animation-delay: 1.58s; }
+.hero__title-line--2 .char-reveal:nth-child(3) { animation-delay: 1.66s; }
+.hero__title-line--2 .char-reveal:nth-child(4) { animation-delay: 1.74s; }
+.hero__title-line--2 .char-reveal:nth-child(5) { animation-delay: 1.82s; }
+.hero__title-line--2 .char-reveal:nth-child(6) { animation-delay: 1.9s; }
+.hero__title-line--2 .char-reveal:nth-child(7) { animation-delay: 1.98s; }
+
+@keyframes charReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+/* Divider wave */
+.hero__divider {
+  margin: 1.5rem auto 2rem;
+  width: clamp(200px, 30vw, 400px);
+  opacity: 0;
+  animation: fadeIn 1s var(--ease-out-expo) forwards;
+  animation-delay: 2.2s;
+}
+
+.hero__divider-svg {
+  width: 100%;
+  height: auto;
+  color: var(--c-gold);
+}
+
+.divider-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawPath 1.5s var(--ease-out-expo) forwards;
+  animation-delay: 2.3s;
+}
+
+.divider-dot {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.hero__tagline {
+  font-family: var(--ff-heading);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--c-parchment);
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  animation: fadeSlideUp 1s var(--ease-out-expo) forwards;
+  animation-delay: 2.5s;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-body);
+  color: var(--c-text-dim);
+  max-width: 50ch;
+  margin: 0 auto 2.5rem;
+  opacity: 0;
+  animation: fadeSlideUp 1s var(--ease-out-expo) forwards;
+  animation-delay: 2.8s;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  border: 1px solid var(--c-border-strong);
+  padding: 1rem 2.5rem;
+  border-radius: var(--r-sm);
+  transition: all 0.4s var(--ease-out-expo);
+  opacity: 0;
+  animation: fadeSlideUp 1s var(--ease-out-expo) forwards;
+  animation-delay: 3.1s;
+}
+
+.hero__cta svg {
+  width: 16px;
+  height: 16px;
+  animation: bounceDown 2s infinite;
+  animation-delay: 4s;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.hero__cta:hover {
+  background: var(--c-gold);
+  color: var(--c-bg);
+  border-color: var(--c-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(196, 134, 11, 0.25);
+}
+
+.hero__cta:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Mandala background */
+.hero__mandala {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(400px, 60vw, 700px);
+  height: clamp(400px, 60vw, 700px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mandala-svg {
+  width: 100%;
+  height: 100%;
+  color: var(--c-gold);
+  animation: mandalaRotate 120s linear infinite;
+}
+
+@keyframes mandalaRotate {
+  to { transform: rotate(360deg); }
+}
+
+.mandala-petals {
+  animation: mandalaRotateReverse 90s linear infinite;
+}
+
+@keyframes mandalaRotateReverse {
+  to { transform: rotate(-360deg); }
+}
+
+
+/* ============================================================
+   BRAND STORY
+   ============================================================ */
+.brand-story {
+  position: relative;
+  padding: var(--sp-section) 0;
+  z-index: 2;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(196, 134, 11, 0.04) 0%, transparent 50%),
+    var(--c-bg);
+}
+
+.scripture-border {
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.scripture-border--bottom {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.scripture-border svg {
+  width: 100%;
+  height: 2px;
+  color: var(--c-gold);
+  opacity: 0.3;
+}
+
+.scripture-line {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+}
+
+.scripture-line.animated {
+  animation: drawPath 2s var(--ease-out-expo) forwards;
+}
+
+.brand-story__content {
+  max-width: 800px;
+}
+
+.brand-story__title {
+  font-size: var(--fs-h2);
+  color: var(--c-parchment);
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+
+.word-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo);
+}
+
+.word-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brand-story__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.brand-story__body p {
+  color: var(--c-text-dim);
+  max-width: 65ch;
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   PRODUCTS — Manuscript Chapters
+   ============================================================ */
+.products {
+  position: relative;
+  z-index: 2;
+  padding-top: var(--sp-section);
+}
+
+.products__header {
+  text-align: center;
+  margin-bottom: var(--sp-section);
+}
+
+.products__title {
+  font-size: var(--fs-h1);
+  color: var(--c-parchment);
+  margin-bottom: 1rem;
+}
+
+.products__subtitle {
+  color: var(--c-text-dim);
+  font-size: var(--fs-body-lg);
+  font-style: italic;
+}
+
+/* Product chapter */
+.product-chapter {
+  position: relative;
+  padding: var(--sp-section) 0;
+  border-top: 1px solid var(--c-border);
+}
+
+.product-chapter__ornament {
+  position: absolute;
+  inset: 2rem;
+  pointer-events: none;
+}
+
+.chapter-border-svg {
+  width: 100%;
+  height: 100%;
+  color: var(--c-gold);
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.product-chapter.in-view .chapter-border-svg {
+  opacity: 0.08;
+}
+
+.chapter-border-rect {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+.product-chapter.in-view .chapter-border-rect {
+  animation: drawPath 2.5s var(--ease-out-expo) forwards;
+}
+
+.product-chapter__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.product-chapter__visual,
+.product-chapter__text {
+  min-width: 0;
+}
+
+.product-chapter--reverse .product-chapter__inner {
+  direction: rtl;
+}
+
+.product-chapter--reverse .product-chapter__inner > * {
+  direction: ltr;
+}
+
+/* Product visual */
+.product-chapter__visual {
+  position: relative;
+}
+
+.product-chapter__number {
+  font-family: var(--ff-display);
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 900;
+  color: var(--c-gold);
+  opacity: 0.06;
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  line-height: 1;
+  z-index: 0;
+  user-select: none;
+}
+
+.product-chapter--reverse .product-chapter__number {
+  left: auto;
+  right: -1rem;
+}
+
+.product-chapter__image-wrap {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: 0 20px 60px var(--c-shadow);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.8s var(--ease-out-expo), opacity 0.8s var(--ease-out-expo);
+}
+
+.product-chapter.in-view .product-chapter__image-wrap {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product-chapter__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.product-chapter__image-wrap:hover .product-chapter__image {
+  transform: scale(1.04);
+}
+
+/* ============================================================
+   PRODUCT VISUAL — RAW SPICE IN BOWL SHOWCASE
+   Fills empty column space below packaging box
+   ============================================================ */
+.product-chapter__bowl-wrap {
+  margin-top: clamp(1.2rem, 2vw, 1.8rem);
+  position: relative;
+  z-index: 2;
+}
+
+.spice-bowl-card {
+  position: relative;
+  background: linear-gradient(165deg, rgba(24, 16, 8, 0.9) 0%, rgba(13, 9, 4, 0.96) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.24);
+  border-radius: var(--r-md);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(212, 168, 50, 0.03);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+}
+
+.spice-bowl-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 168, 50, 0.48);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 168, 50, 0.14);
+}
+
+.spice-bowl-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #050402;
+}
+
+.spice-bowl-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.spice-bowl-card:hover .spice-bowl-card__img {
+  transform: scale(1.05);
+  filter: brightness(1.02) contrast(1.08);
+}
+
+.spice-bowl-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 10, 5, 0.05) 0%, rgba(14, 10, 5, 0.5) 75%, rgba(14, 10, 5, 0.9) 100%);
+  pointer-events: none;
+}
+
+.spice-bowl-card__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.65rem;
+  background: rgba(14, 10, 5, 0.88);
+  border: 1px solid rgba(212, 168, 50, 0.4);
+  border-radius: 999px;
+  font-family: var(--ff-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--c-gold-light);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.spice-bowl-badge__star {
+  color: var(--c-saffron);
+  font-size: 0.65rem;
+}
+
+.spice-bowl-card__content {
+  padding: 1rem 1.25rem 1.25rem;
+  text-align: left;
+}
+
+.spice-bowl-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spice-bowl-card__origin {
+  color: var(--c-saffron);
+  font-weight: 600;
+}
+
+.spice-bowl-card__bullet {
+  color: rgba(212, 168, 50, 0.4);
+}
+
+.spice-bowl-card__state {
+  color: var(--c-gold-light);
+  font-weight: 500;
+}
+
+.spice-bowl-card__desc {
+  font-size: 0.84rem;
+  color: var(--c-text-dim);
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+
+.spice-bowl-card__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(212, 168, 50, 0.18);
+}
+
+.spice-metric {
+  display: flex;
+  flex-direction: column;
+  background: rgba(212, 168, 50, 0.04);
+  border: 1px solid rgba(212, 168, 50, 0.12);
+  border-radius: var(--r-sm);
+  padding: 0.35rem 0.5rem;
+  text-align: center;
+}
+
+.spice-metric__label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-gold);
+  margin-bottom: 0.15rem;
+}
+
+.spice-metric__val {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--c-parchment);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Product text */
+.product-chapter__text {
+  padding-top: 1rem;
+}
+
+.product-chapter__label {
+  display: inline-block;
+  font-size: var(--fs-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--c-gold);
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.6s var(--ease-out-expo);
+}
+
+.product-chapter.in-view .product-chapter__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.product-chapter__name {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--c-parchment);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.product-chapter__tagline {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-body-lg);
+  font-style: italic;
+  color: var(--c-gold-light);
+  margin-bottom: 1.5rem;
+}
+
+.product-chapter__desc {
+  color: var(--c-text-dim);
+  margin-bottom: 1rem;
+  max-width: 55ch;
+  line-height: 1.8;
+}
+
+/* Features */
+.product-chapter__features {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.features-title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 1rem;
+}
+
+.features-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--c-text-dim);
+  font-size: var(--fs-small);
+  line-height: 1.6;
+}
+
+.features-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-gold);
+  opacity: 0.5;
+}
+
+/* Marquee */
+.product-chapter__perfect-for {
+  margin-top: 1.5rem;
+}
+
+.marquee-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  padding: 0.5rem 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: marqueeScroll 25s linear infinite;
+  width: max-content;
+}
+
+.marquee-track span {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  letter-spacing: 0.06em;
+  color: var(--c-text-dim);
+  padding: 0 0.4rem;
+}
+
+.marquee-dot {
+  display: inline-flex;
+  align-items: center;
+}
+
+.marquee-dot::after {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--c-gold);
+  opacity: 0.4;
+  margin: 0 0.5rem;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.product-chapter__closing {
+  margin-top: 1.5rem;
+  color: var(--c-text-muted);
+  font-size: var(--fs-small);
+}
+
+
+/* ============================================================
+   THE DIFFERENCE
+   ============================================================ */
+.difference {
+  position: relative;
+  z-index: 2;
+  padding: var(--sp-section) 0;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(196, 134, 11, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(184, 92, 56, 0.03) 0%, transparent 50%),
+    var(--c-bg-warm);
+}
+
+.difference__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.difference__title {
+  font-size: var(--fs-h2);
+  color: var(--c-parchment);
+  margin-bottom: 1rem;
+}
+
+.difference__subtitle {
+  color: var(--c-text-dim);
+  font-size: var(--fs-body-lg);
+  line-height: 1.8;
+}
+
+.difference__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.difference__card {
+  padding: 2rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  transition: all 0.5s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+}
+
+.difference__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.difference__card:hover::before {
+  opacity: 1;
+}
+
+.difference__card:hover {
+  border-color: var(--c-border-strong);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.difference__card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  color: var(--c-gold);
+}
+
+.difference__card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.difference__card-title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  color: var(--c-parchment);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.difference__card-desc {
+  color: var(--c-text-dim);
+  font-size: var(--fs-small);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .difference__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .difference__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   FROM OUR KITCHEN TO YOURS
+   ============================================================ */
+.kitchen {
+  position: relative;
+  z-index: 2;
+  padding: var(--sp-section) 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(196, 134, 11, 0.04) 0%, transparent 50%),
+    var(--c-bg);
+}
+
+.kitchen__content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kitchen__lines {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kitchen__line {
+  font-size: var(--fs-body-lg);
+  color: var(--c-text-dim);
+  line-height: 1.8;
+}
+
+.kitchen__line--accent {
+  font-family: var(--ff-heading);
+  font-style: italic;
+  color: var(--c-parchment);
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+}
+
+.kitchen__closing {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--c-border);
+}
+
+.kitchen__closing p {
+  color: var(--c-text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.kitchen__essence {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h3);
+  color: var(--c-gold);
+  margin-top: 1rem;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0 2rem;
+  background: var(--c-bg-warm);
+  border-top: 1px solid var(--c-border);
+}
+
+.footer__ornament-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer__ornament-top svg {
+  width: 100%;
+  height: 100%;
+  color: var(--c-gold);
+  opacity: 0.2;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.footer__logo {
+  height: 39px;
+  width: auto;
+  margin-bottom: 1rem;
+  filter: brightness(1.1);
+}
+
+.footer__brand-name {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--c-gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.footer__brand-tagline {
+  color: var(--c-text-dim);
+  font-style: italic;
+  font-size: var(--fs-small);
+}
+
+.footer__heading {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--c-gold);
+  margin-bottom: 1.2rem;
+}
+
+.footer__link {
+  display: block;
+  color: var(--c-text-dim);
+  font-size: var(--fs-small);
+  margin-bottom: 0.6rem;
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--c-gold);
+}
+
+.footer__whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--c-text-dim);
+  font-size: var(--fs-small);
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.footer__whatsapp-link:hover {
+  color: #25D366;
+}
+
+.footer__whatsapp-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__qr {
+  border-radius: var(--r-sm);
+  opacity: 0.9;
+  border: 1px solid var(--c-border);
+}
+
+.footer__bottom {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--c-text-muted);
+  font-size: var(--fs-caption);
+}
+
+.footer__bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer__bottom-links a {
+  color: var(--c-text-dim);
+  transition: color 0.2s;
+}
+
+.footer__bottom-links a:hover {
+  color: var(--c-gold);
+}
+
+.footer__bottom-links span {
+  color: rgba(196, 134, 11, 0.3);
+}
+
+@media (max-width: 900px) {
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   POLICY & LEGAL PAGES ARCHITECTURE
+   ============================================================ */
+.policy-section {
+  padding: 4rem 0 6rem;
+  position: relative;
+  min-height: 80vh;
+}
+
+.policy-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.policy-toc {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+  background: rgba(20, 14, 8, 0.75);
+  border: 1px solid rgba(212, 168, 50, 0.2);
+  border-radius: var(--r-md);
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.policy-toc__heading {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--c-gold);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.policy-toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.policy-toc__link {
+  display: block;
+  font-size: var(--fs-small);
+  color: var(--c-text-dim);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--r-sm);
+  border-left: 2px solid transparent;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+.policy-toc__link:hover,
+.policy-toc__link.active {
+  color: var(--c-gold-light);
+  background: rgba(212, 168, 50, 0.08);
+  border-left-color: var(--c-gold);
+  transform: translateX(4px);
+}
+
+.policy-body {
+  background: rgba(18, 12, 6, 0.6);
+  border: 1px solid rgba(212, 168, 50, 0.18);
+  border-radius: var(--r-md);
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.policy-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(212, 168, 50, 0.15);
+  font-size: var(--fs-caption);
+  color: var(--c-text-muted);
+}
+
+.policy-meta-badge {
+  background: var(--c-gold-dim);
+  color: var(--c-gold-light);
+  border: 1px solid rgba(212, 168, 50, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--r-full);
+  font-family: var(--ff-heading);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.policy-clause {
+  margin-bottom: 3rem;
+  scroll-margin-top: calc(var(--nav-h) + 2rem);
+}
+
+.policy-clause:last-child {
+  margin-bottom: 0;
+}
+
+.policy-clause__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.policy-clause__number {
+  font-family: var(--ff-heading);
+  color: var(--c-gold);
+  font-size: 1.1rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.policy-clause__title {
+  font-family: var(--ff-heading);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  color: var(--c-parchment-light);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.policy-clause p {
+  color: var(--c-parchment);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.policy-clause ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.policy-clause li {
+  color: var(--c-parchment);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
+.policy-clause li strong {
+  color: var(--c-gold-light);
+}
+
+.policy-callout {
+  background: rgba(196, 134, 11, 0.08);
+  border-left: 3px solid var(--c-gold);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.policy-callout h4 {
+  font-family: var(--ff-heading);
+  font-size: 0.9rem;
+  color: var(--c-gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.policy-callout p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--c-parchment);
+  line-height: 1.6;
+}
+
+/* FAQ Accordion Styles */
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.faq-item {
+  background: rgba(22, 16, 9, 0.7);
+  border: 1px solid rgba(212, 168, 50, 0.18);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(212, 168, 50, 0.4);
+}
+
+.faq-item.active {
+  border-color: var(--c-gold);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  background: transparent;
+  border: none;
+  color: var(--c-parchment-light);
+  font-family: var(--ff-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s;
+  gap: 1rem;
+}
+
+.faq-trigger:hover {
+  color: var(--c-gold-light);
+}
+
+.faq-trigger__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 168, 50, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-gold);
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease-out-expo), background 0.3s;
+}
+
+.faq-item.active .faq-trigger__icon {
+  transform: rotate(45deg);
+  background: var(--c-gold);
+  color: var(--c-bg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-out-expo), padding 0.3s;
+  padding: 0 1.75rem;
+}
+
+.faq-item.active .faq-content {
+  max-height: 600px;
+  padding: 0 1.75rem 1.75rem;
+}
+
+.faq-content p {
+  color: var(--c-parchment);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+  opacity: 0.88;
+}
+
+.faq-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .policy-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .policy-toc {
+    position: static;
+  }
+}
+
+
+/* ============================================================
+   SCROLL REVEAL SYSTEM
+   ============================================================ */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.reveal-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for difference cards */
+.reveal-section[data-delay="1"] { transition-delay: 0.1s; }
+.reveal-section[data-delay="2"] { transition-delay: 0.2s; }
+.reveal-section[data-delay="3"] { transition-delay: 0.3s; }
+.reveal-section[data-delay="4"] { transition-delay: 0.4s; }
+.reveal-section[data-delay="5"] { transition-delay: 0.5s; }
+
+.reveal-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+}
+
+.reveal-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE FIRST OVERRIDES
+   ============================================================ */
+@media (max-width: 900px) {
+  .product-chapter__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-chapter--reverse .product-chapter__inner {
+    direction: ltr;
+  }
+
+  .product-chapter__number {
+    font-size: 4rem;
+    top: -1rem;
+    left: 0;
+  }
+
+  .product-chapter--reverse .product-chapter__number {
+    left: 0;
+    right: auto;
+  }
+
+  .product-chapter__image {
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --sp-section: 4rem;
+    --sp-page: 1.25rem;
+    --nav-h: 60px;
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero__title {
+    letter-spacing: 0.06em;
+  }
+
+  .hero__title-line--2 {
+    letter-spacing: 0.12em;
+  }
+
+  .hero__mandala {
+    width: 300px;
+    height: 300px;
+  }
+
+  .product-chapter {
+    padding: 3rem 0;
+  }
+
+  .product-chapter__ornament {
+    inset: 0.5rem;
+  }
+}
+
+
+/* ============================================================
+   MULTI-PAGE EXTENSIONS — Subpages, Terroir Map, 3D Catalog
+   ============================================================ */
+
+/* Active nav link indicator */
+.nav__links a.active {
+  color: var(--c-gold);
+  position: relative;
+}
+
+.nav__links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background: var(--c-gold);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--c-gold-glow);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav__actions.desktop {
+    display: none;
+  }
+  .terroir-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nav__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--c-gold-dim);
+  border: 1px solid var(--c-border-strong);
+  color: var(--c-gold-light);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--r-sm);
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.nav__cta-btn:hover {
+  background: var(--c-gold);
+  color: var(--c-bg);
+  border-color: var(--c-gold);
+  box-shadow: 0 4px 16px rgba(196, 134, 11, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Subpage Hero Header */
+.subpage-hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 4rem) 0 4rem;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(196, 134, 11, 0.08) 0%, transparent 70%);
+  border-bottom: 1px solid var(--c-border);
+  overflow: hidden;
+}
+
+.subpage-hero__lipi {
+  font-family: var(--ff-devanagari);
+  font-size: clamp(3rem, 10vw, 8rem);
+  color: var(--c-gold);
+  opacity: 0.05;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.subpage-hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.subpage-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subpage-hero__breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-caption);
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.subpage-hero__breadcrumbs a {
+  color: var(--c-gold);
+  transition: color 0.2s;
+}
+
+.subpage-hero__breadcrumbs a:hover {
+  color: var(--c-gold-light);
+}
+
+.subpage-hero__title {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  color: var(--c-parchment);
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.subpage-hero__subtitle {
+  font-size: var(--fs-body-lg);
+  color: var(--c-text-dim);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ──────────────────────────────────────────────────────────
+   TERROIR WEB GIS MAP STYLES
+   ────────────────────────────────────────────────────────── */
+.terroir-section {
+  padding: var(--sp-section) 0;
+  position: relative;
+}
+
+.terroir-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .terroir-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .terroir-photo-spotlight {
+    min-height: 380px;
+  }
+}
+
+.terroir-map-container {
+  position: relative;
+  background: rgba(28, 18, 8, 0.6);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--r-md);
+  padding: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.terroir-map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 1rem;
+}
+
+.terroir-map-header h4 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  color: var(--c-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.terroir-map-header span {
+  font-size: var(--fs-caption);
+  color: var(--c-text-muted);
+}
+
+.terroir-svg-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 4.2;
+}
+
+.india-vector-map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-land {
+  fill: #150F08;
+  stroke: rgba(196, 134, 11, 0.35);
+  stroke-width: 1.2;
+}
+
+.map-border-lines {
+  stroke: rgba(196, 134, 11, 0.18);
+  stroke-width: 0.8;
+  stroke-dasharray: 2 4;
+}
+
+.map-hotspot {
+  cursor: pointer;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.map-hotspot:hover {
+  transform: scale(1.2);
+}
+
+.map-hotspot .hotspot-core {
+  fill: var(--c-gold);
+  transition: fill 0.2s;
+}
+
+.map-hotspot .hotspot-pulse {
+  fill: none;
+  stroke: var(--c-gold);
+  stroke-width: 1.5;
+  opacity: 0.8;
+  animation: hotspotPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  transform-origin: center;
+}
+
+.map-hotspot.active .hotspot-core {
+  fill: #FFE382;
+  filter: drop-shadow(0 0 6px rgba(255, 227, 130, 0.8));
+}
+
+.map-hotspot.active .hotspot-pulse {
+  stroke: #FFE382;
+  animation-duration: 1.5s;
+}
+
+@keyframes hotspotPulse {
+  0% {
+    r: 6;
+    opacity: 0.9;
+  }
+  100% {
+    r: 22;
+    opacity: 0;
+  }
+}
+
+.map-hotspot-label {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--c-parchment);
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+/* Terroir Card (Info Panel) */
+.terroir-card {
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--r-md);
+  padding: 2rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  animation: terroirCardFadeIn 0.4s var(--ease-out-expo) forwards;
+}
+
+@keyframes terroirCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terroir-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.terroir-card__hindi {
+  font-family: var(--ff-devanagari);
+  font-size: 1rem;
+  color: var(--c-gold);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.terroir-card__title {
+  font-family: var(--ff-heading);
+  font-size: 1.5rem;
+  color: var(--c-parchment);
+  line-height: 1.2;
+}
+
+.terroir-card__spice {
+  font-size: var(--fs-small);
+  color: var(--c-saffron);
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.terroir-card__badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  background: var(--c-gold-dim);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--r-sm);
+  font-family: var(--ff-heading);
+  font-size: 0.75rem;
+  color: var(--c-gold);
+}
+
+.terroir-card__metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-item {
+  background: rgba(14, 10, 5, 0.4);
+  padding: 0.75rem;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(196, 134, 11, 0.1);
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  display: block;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--c-parchment-dark);
+}
+
+.terroir-card__desc {
+  margin-bottom: 1.5rem;
+}
+
+.terroir-card__desc h4 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-gold);
+  margin-bottom: 0.5rem;
+}
+
+.terroir-card__desc p {
+  font-size: var(--fs-small);
+  color: var(--c-text-dim);
+  line-height: 1.6;
+}
+
+.btn-terroir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: var(--c-gold);
+  color: var(--c-bg);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--r-sm);
+  transition: all 0.25s var(--ease-out-expo);
+}
+
+.btn-terroir:hover {
+  background: #FFE382;
+  box-shadow: 0 4px 20px rgba(196, 134, 11, 0.4);
+  transform: translateY(-2px);
+}
+
+.region-selector-bar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.region-pill-btn {
+  padding: 0.45rem 1rem;
+  background: rgba(14, 10, 5, 0.6);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-dim);
+  font-size: var(--fs-caption);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.region-pill-btn:hover,
+.region-pill-btn.active {
+  background: var(--c-gold-dim);
+  border-color: var(--c-gold);
+  color: var(--c-gold-light);
+  box-shadow: 0 0 12px rgba(212, 168, 50, 0.2);
+}
+
+/* Photo-Editorial Terroir Showcase */
+.terroir-section__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.terroir-section__header .display-text {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--c-gold-light);
+  margin-bottom: 0.75rem;
+}
+
+.terroir-section__header .section-lead {
+  color: var(--c-text-dim);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.terroir-photo-spotlight {
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid rgba(212, 168, 50, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #0E0A05;
+}
+
+.terroir-photo-spotlight__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.72) saturate(1.15);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+}
+
+.terroir-photo-spotlight:hover .terroir-photo-spotlight__img {
+  transform: scale(1.04);
+}
+
+.terroir-photo-spotlight__overlay {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(14, 10, 5, 0.75) 50%, rgba(14, 10, 5, 0.95) 100%);
+}
+
+.terroir-photo-spotlight__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.terroir-photo-spotlight__stamp {
+  font-family: var(--ff-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--c-gold-light);
+  background: rgba(14, 10, 5, 0.8);
+  border: 1px solid rgba(212, 168, 50, 0.35);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--r-sm);
+  backdrop-filter: blur(8px);
+}
+
+.terroir-photo-spotlight__title {
+  font-family: var(--ff-display);
+  font-size: 1.6rem;
+  color: var(--c-parchment);
+  margin-bottom: 0.4rem;
+}
+
+.terroir-photo-spotlight__caption {
+  font-size: 0.9rem;
+  color: var(--c-text-dim);
+  line-height: 1.5;
+}
+
+/* Terroir Atlas Mini-Grid */
+.terroir-atlas-wrap {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(212, 168, 50, 0.15);
+}
+
+.terroir-atlas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.terroir-atlas-title {
+  font-family: var(--ff-serif);
+  font-size: 1.25rem;
+  color: var(--c-gold-light);
+}
+
+.terroir-atlas-sub {
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+}
+
+.terroir-atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.terroir-atlas-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem;
+  background: rgba(20, 14, 8, 0.65);
+  border: 1px solid rgba(212, 168, 50, 0.18);
+  border-radius: var(--r-md);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.terroir-atlas-card:hover {
+  background: rgba(212, 168, 50, 0.08);
+  border-color: rgba(212, 168, 50, 0.45);
+  transform: translateY(-2px);
+}
+
+.terroir-atlas-card.active {
+  background: rgba(212, 168, 50, 0.12);
+  border-color: var(--c-gold);
+  box-shadow: 0 0 15px rgba(212, 168, 50, 0.2);
+}
+
+.terroir-atlas-card__thumb {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(212, 168, 50, 0.25);
+}
+
+.terroir-atlas-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.terroir-atlas-card__mudra {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(14, 10, 5, 0.85);
+  border: 1px solid var(--c-gold);
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.65rem;
+  color: var(--c-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.terroir-atlas-card__content h4 {
+  font-family: var(--ff-serif);
+  font-size: 0.9rem;
+  color: var(--c-parchment);
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+
+.terroir-atlas-card__content p {
+  font-size: 0.75rem;
+  color: var(--c-text-dim);
+  margin: 0;
+}
+
+/* ──────────────────────────────────────────────────────────
+   SPICES CATALOG & 3D CARDS
+   ────────────────────────────────────────────────────────── */
+.catalog-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.catalog-filter-btn {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-dim);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.catalog-filter-btn:hover,
+.catalog-filter-btn.active {
+  background: var(--c-gold-dim);
+  border-color: var(--c-gold);
+  color: var(--c-gold);
+}
+
+.catalog-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.spice-card-3d {
+  position: relative;
+  background: rgba(28, 18, 8, 0.45);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: 1.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.spice-card-3d:hover {
+  border-color: var(--c-border-strong);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.spice-card-3d__img-wrap {
+  position: relative;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 1.25rem;
+  background: #090603;
+}
+
+.spice-card-3d__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.spice-card-3d:hover .spice-card-3d__img {
+  transform: scale(1.05);
+}
+
+.spice-card-3d__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: rgba(14, 10, 5, 0.85);
+  border: 1px solid var(--c-border);
+  font-family: var(--ff-heading);
+  font-size: 0.7rem;
+  color: var(--c-gold);
+  border-radius: var(--r-sm);
+  backdrop-filter: blur(4px);
+}
+
+.spice-card-3d__num {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--c-gold);
+  opacity: 0.6;
+}
+
+.spice-card-3d__title {
+  font-family: var(--ff-heading);
+  font-size: 1.35rem;
+  color: var(--c-parchment);
+  margin-bottom: 0.35rem;
+}
+
+.spice-card-3d__tagline {
+  font-size: var(--fs-caption);
+  font-style: italic;
+  color: var(--c-saffron);
+  margin-bottom: 0.75rem;
+}
+
+.spice-card-3d__desc {
+  font-size: var(--fs-small);
+  color: var(--c-text-dim);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.spice-card-3d__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.spice-tag {
+  padding: 0.2rem 0.5rem;
+  background: rgba(196, 134, 11, 0.08);
+  border: 1px solid rgba(196, 134, 11, 0.15);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: var(--c-text-muted);
+}
+
+/* ──────────────────────────────────────────────────────────
+   CONTACT & INQUIRY FORM STYLES
+   ────────────────────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+/* ── Contact Grid: Tablet & Mobile (Robust vertical stacking) ── */
+@media screen and (max-width: 992px) {
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 2.25rem !important;
+  }
+  .contact-form-wrap,
+  .contact-whatsapp-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-grid {
+    gap: 1.75rem !important;
+  }
+  .contact-form-wrap {
+    padding: 1.5rem 1.15rem !important;
+    border-radius: var(--r-md) !important;
+  }
+  .contact-whatsapp-box {
+    padding: 1.75rem 1.15rem !important;
+    border-radius: var(--r-md) !important;
+  }
+  .contact-form-wrap .form-input,
+  .contact-form-wrap .form-select,
+  .contact-form-wrap .form-textarea {
+    font-size: 16px !important;
+    padding: 0.8rem 0.9rem !important;
+  }
+  .contact-form-wrap #submitMessageBtn,
+  .contact-whatsapp-box .btn-terroir {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.9rem 1rem !important;
+    font-size: 0.88rem !important;
+  }
+}
+
+.contact-form-wrap {
+  background: rgba(28, 18, 8, 0.45);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-small);
+  color: var(--c-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(14, 10, 5, 0.6);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-sm);
+  color: var(--c-parchment);
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--c-gold);
+  box-shadow: 0 0 12px var(--c-gold-glow);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-whatsapp-box {
+  background: rgba(28, 18, 8, 0.65);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--r-md);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.contact-whatsapp-box .footer__qr {
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: var(--r-sm);
+  background: white;
+  padding: 8px;
+  width: 140px;
+  height: 140px;
+}
+
+/* ============================================================
+   SECTION-SPECIFIC BACKGROUND ANIMATIONS & RICH SPICE COLORS
+   ============================================================ */
+
+/* Shared Background Container */
+.section-has-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.section-bg-art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* --- 1. Saffron Aurora (Grand Hero & Spices Hero) --- */
+.bg-aurora-saffron {
+  position: absolute;
+  inset: -15%;
+  background: 
+    radial-gradient(ellipse 650px 450px at 20% 30%, var(--spice-saffron-glow) 0%, transparent 70%),
+    radial-gradient(ellipse 550px 400px at 80% 65%, rgba(212, 168, 50, 0.18) 0%, transparent 70%),
+    radial-gradient(circle 350px at 50% 50%, rgba(232, 93, 4, 0.12) 0%, transparent 60%);
+  filter: blur(50px);
+  animation: auroraMeshShift 15s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes auroraMeshShift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(3%, 4%) scale(1.08); }
+  100% { transform: translate(-3%, -2%) scale(0.95); }
+}
+
+/* --- 2. Emerald Aurora (Origins & Moringa Showcase) --- */
+.bg-aurora-emerald {
+  position: absolute;
+  inset: -15%;
+  background: 
+    radial-gradient(ellipse 700px 500px at 80% 20%, var(--spice-emerald-glow) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 450px at 15% 80%, rgba(45, 106, 79, 0.22) 0%, transparent 70%),
+    radial-gradient(circle 400px at 45% 45%, rgba(64, 145, 108, 0.15) 0%, transparent 60%);
+  filter: blur(55px);
+  animation: auroraEmeraldShift 18s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes auroraEmeraldShift {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { transform: translate(-4%, 3%) scale(1.1) rotate(2deg); }
+  100% { transform: translate(3%, -3%) scale(0.98) rotate(-1deg); }
+}
+
+/* --- 3. Chapter 01: Moringa Verdant Botanical Canopy --- */
+.bg-chapter-moringa {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle 500px at 85% 35%, rgba(45, 106, 79, 0.25) 0%, transparent 70%),
+    radial-gradient(circle 450px at 15% 75%, rgba(27, 67, 50, 0.3) 0%, transparent 65%),
+    linear-gradient(180deg, transparent 0%, rgba(15, 56, 42, 0.15) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.chapter--moringa {
+  border-left: 2px solid rgba(45, 106, 79, 0.4);
+}
+
+.chapter--moringa .chapter__num {
+  color: #52B788;
+  text-shadow: 0 0 20px rgba(45, 106, 79, 0.5);
+}
+
+.chapter--moringa .tag {
+  background: rgba(27, 67, 50, 0.35);
+  border-color: rgba(64, 145, 108, 0.4);
+  color: #8FD8B3;
+}
+
+/* --- 4. Chapter 02: Ajwain Golden Hearth Heatwave --- */
+.bg-chapter-ajwain {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 600px 350px at 20% 40%, var(--spice-saffron-glow) 0%, transparent 70%),
+    radial-gradient(circle 400px at 75% 65%, rgba(255, 183, 3, 0.18) 0%, transparent 60%),
+    linear-gradient(180deg, transparent 0%, rgba(232, 93, 4, 0.12) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-chapter-ajwain::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: radial-gradient(ellipse 80% 100px at 50% 100%, rgba(244, 140, 6, 0.15), transparent);
+  animation: heatwavePulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes heatwavePulse {
+  0%   { transform: scaleY(1); opacity: 0.12; }
+  50%  { transform: scaleY(1.3); opacity: 0.25; }
+  100% { transform: scaleY(1); opacity: 0.12; }
+}
+
+.chapter--ajwain {
+  border-left: 2px solid rgba(244, 140, 6, 0.4);
+}
+
+.chapter--ajwain .chapter__num {
+  color: var(--spice-turmeric);
+  text-shadow: 0 0 20px rgba(244, 140, 6, 0.4);
+}
+
+.chapter--ajwain .tag {
+  background: rgba(232, 93, 4, 0.2);
+  border-color: rgba(244, 140, 6, 0.4);
+  color: #FFD166;
+}
+
+/* --- 5. Chapter 03: Kalonji Obsidian Starlight Nebula --- */
+.bg-chapter-kalonji {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle 550px at 70% 30%, var(--spice-plum-glow) 0%, transparent 70%),
+    radial-gradient(circle 450px at 25% 70%, rgba(26, 22, 43, 0.5) 0%, transparent 70%),
+    linear-gradient(180deg, transparent 0%, rgba(43, 9, 56, 0.2) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-chapter-kalonji::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #C4860B, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 150px 70px, #F5ECD7, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 280px 140px, #A29BFE, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 390px 220px, #C4860B, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 520px 90px, #F5ECD7, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 600px 300px;
+  opacity: 0.35;
+  animation: starlightTwinkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes starlightTwinkle {
+  0%   { opacity: 0.25; transform: scale(1); }
+  50%  { opacity: 0.55; transform: scale(1.02); }
+  100% { opacity: 0.25; transform: scale(1); }
+}
+
+.chapter--kalonji {
+  border-left: 2px solid rgba(108, 92, 231, 0.4);
+}
+
+.chapter--kalonji .chapter__num {
+  color: #A29BFE;
+  text-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
+}
+
+.chapter--kalonji .tag {
+  background: rgba(43, 9, 56, 0.45);
+  border-color: rgba(108, 92, 231, 0.4);
+  color: #D6D1FF;
+}
+
+/* --- 6. Chapter 04: Curry Leaves Malabar Monsoon Mist --- */
+.bg-chapter-curry {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 650px 400px at 20% 50%, rgba(15, 56, 42, 0.35) 0%, transparent 70%),
+    radial-gradient(circle 500px at 80% 50%, rgba(30, 90, 60, 0.25) 0%, transparent 65%),
+    linear-gradient(180deg, transparent 0%, rgba(11, 43, 30, 0.25) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-chapter-curry::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(82, 183, 136, 0.03) 40px,
+    rgba(82, 183, 136, 0.03) 80px
+  );
+  animation: mistDrift 20s linear infinite;
+}
+
+@keyframes mistDrift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 500px 500px; }
+}
+
+.chapter--curry {
+  border-left: 2px solid rgba(0, 184, 148, 0.4);
+}
+
+.chapter--curry .chapter__num {
+  color: #55EFC4;
+  text-shadow: 0 0 20px rgba(0, 184, 148, 0.4);
+}
+
+.chapter--curry .tag {
+  background: rgba(15, 56, 42, 0.4);
+  border-color: rgba(0, 184, 148, 0.4);
+  color: #8BF2D5;
+}
+
+/* --- 7. Chapter 05: Kasuri Methi Rajasthan Desert Dune Mirage --- */
+.bg-chapter-methi {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 700px 400px at 80% 40%, var(--spice-ruby-glow) 0%, transparent 70%),
+    radial-gradient(circle 500px at 15% 60%, rgba(200, 125, 42, 0.2) 0%, transparent 65%),
+    linear-gradient(180deg, transparent 0%, rgba(200, 75, 49, 0.15) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.chapter--methi {
+  border-left: 2px solid rgba(225, 112, 85, 0.4);
+}
+
+.chapter--methi .chapter__num {
+  color: #FAB1A0;
+  text-shadow: 0 0 20px rgba(225, 112, 85, 0.4);
+}
+
+.chapter--methi .tag {
+  background: rgba(200, 75, 49, 0.25);
+  border-color: rgba(225, 112, 85, 0.4);
+  color: #FFC0B3;
+}
+
+/* --- 8. Topographic Waves Animation (Origins Hero) --- */
+.bg-topographic-waves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.2;
+  background-image: radial-gradient(circle at 50% 50%, transparent 40%, rgba(212, 168, 50, 0.08) 41%, transparent 42%),
+                    radial-gradient(circle at 50% 50%, transparent 55%, rgba(212, 168, 50, 0.08) 56%, transparent 57%),
+                    radial-gradient(circle at 50% 50%, transparent 70%, rgba(212, 168, 50, 0.08) 71%, transparent 72%),
+                    radial-gradient(circle at 50% 50%, transparent 85%, rgba(212, 168, 50, 0.08) 86%, transparent 87%);
+  background-size: 800px 800px;
+  background-position: center;
+  animation: topoPulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes topoPulse {
+  0%   { transform: scale(0.95); opacity: 0.15; }
+  50%  { transform: scale(1.05); opacity: 0.28; }
+  100% { transform: scale(0.95); opacity: 0.15; }
+}
+
+/* Dynamic Map Terroir Ambient Hue Container */
+.terroir-ambient-glow {
+  position: absolute;
+  inset: -10%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.3;
+  transition: background 1.2s ease-in-out;
+  background: radial-gradient(circle at 50% 50%, var(--spice-saffron), transparent 70%);
+}
+
+.terroir-ambient-glow[data-region="westernghats"] {
+  background: radial-gradient(circle at 45% 75%, var(--spice-emerald), transparent 70%);
+}
+
+.terroir-ambient-glow[data-region="nagaur"] {
+  background: radial-gradient(circle at 35% 35%, var(--spice-terracotta), transparent 70%);
+}
+
+.terroir-ambient-glow[data-region="saurashtra"] {
+  background: radial-gradient(circle at 30% 55%, var(--spice-saffron), transparent 70%);
+}
+
+.terroir-ambient-glow[data-region="malwa"] {
+  background: radial-gradient(circle at 50% 50%, var(--spice-plum), transparent 70%);
+}
+
+.terroir-ambient-glow[data-region="tamilnadu"] {
+  background: radial-gradient(circle at 55% 85%, var(--spice-leaf), transparent 70%);
+}
+
+/* --- 9. Sunbeam Rays (About Hero) --- */
+.bg-sunbeam-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1200px;
+  height: 1200px;
+  margin-top: -600px;
+  margin-left: -600px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.08;
+  background: repeating-conic-gradient(
+    from 0deg,
+    var(--c-gold) 0deg 15deg,
+    transparent 15deg 30deg
+  );
+  animation: sunbeamRotate 60s linear infinite;
+}
+
+@keyframes sunbeamRotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- 10. Optical Purity Scan (About 4-Stage Protocol) --- */
+.bg-purity-scan-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-purity-scan-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 50, 0.15), rgba(244, 140, 6, 0.25), rgba(212, 168, 50, 0.15), transparent);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: 2;
+  animation: puritySweep 10s ease-in-out infinite;
+}
+
+@keyframes puritySweep {
+  0%   { left: -150px; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* --- 11. Golden Harvest Dawn & Earth Ripples (Founder Page) --- */
+.bg-harvest-dawn {
+  position: absolute;
+  inset: -15%;
+  background: 
+    radial-gradient(ellipse 800px 500px at 50% 10%, rgba(244, 140, 6, 0.22) 0%, transparent 70%),
+    radial-gradient(circle 500px at 20% 70%, rgba(200, 125, 42, 0.18) 0%, transparent 60%),
+    radial-gradient(circle 450px at 80% 70%, rgba(212, 168, 50, 0.15) 0%, transparent 60%);
+  filter: blur(55px);
+  animation: harvestPulse 14s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes harvestPulse {
+  0%   { transform: scale(1) translateY(0); }
+  50%  { transform: scale(1.08) translateY(-20px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+.bg-earth-ripples {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 40px rgba(196, 134, 11, 0.03),
+    0 0 0 90px rgba(196, 134, 11, 0.02),
+    0 0 0 150px rgba(196, 134, 11, 0.015),
+    0 0 0 220px rgba(196, 134, 11, 0.01);
+  animation: rippleGrow 8s ease-out infinite;
+}
+
+@keyframes rippleGrow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.3;
+  }
+}
+
+/* --- 12. Revolving Conic Liquid Gradient Border (Contact WhatsApp Desk) --- */
+.contact-whatsapp-box.with-conic-shimmer {
+  position: relative;
+  background: rgba(18, 12, 5, 0.85);
+  border: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.contact-whatsapp-box.with-conic-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--r-md) + 2px);
+  background: conic-gradient(
+    from 0deg,
+    #25D366,
+    var(--c-gold),
+    var(--spice-saffron),
+    #128C7E,
+    #25D366
+  );
+  animation: rotateConic 6s linear infinite;
+  z-index: -2;
+}
+
+.contact-whatsapp-box.with-conic-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: var(--r-md);
+  background: rgba(18, 12, 5, 0.95);
+  z-index: -1;
+}
+
+@keyframes rotateConic {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Color Coded Product Catalog Cards on spices.html */
+/* Color Coded Product Catalog Cards on spices.html */
+.spice-card-3d[data-category="powders"],
+.spice-card[data-category="powders"] {
+  border-color: rgba(45, 106, 79, 0.45);
+  box-shadow: 0 12px 36px rgba(27, 67, 50, 0.28);
+}
+
+.spice-card-3d[data-category="powders"] .spice-card-3d__badge,
+.spice-card[data-category="powders"] .spice-card__badge {
+  color: #52B788;
+  background: rgba(27, 67, 50, 0.45);
+  border: 1px solid rgba(64, 145, 108, 0.6);
+}
+
+.spice-card-3d[data-category="seeds"],
+.spice-card[data-category="seeds"] {
+  border-color: rgba(244, 140, 6, 0.4);
+  box-shadow: 0 12px 36px rgba(244, 140, 6, 0.2);
+}
+
+.spice-card-3d[data-category="seeds"] .spice-card-3d__badge,
+.spice-card[data-category="seeds"] .spice-card__badge {
+  color: #FFB703;
+  background: rgba(232, 93, 4, 0.3);
+  border: 1px solid rgba(244, 140, 6, 0.6);
+}
+
+.spice-card-3d[data-category="leaves"],
+.spice-card[data-category="leaves"] {
+  border-color: rgba(0, 184, 148, 0.4);
+  box-shadow: 0 12px 36px rgba(0, 184, 148, 0.22);
+}
+
+.spice-card-3d[data-category="leaves"] .spice-card-3d__badge,
+.spice-card[data-category="leaves"] .spice-card__badge {
+  color: #55EFC4;
+  background: rgba(15, 56, 42, 0.45);
+  border: 1px solid rgba(0, 184, 148, 0.6);
+}
+
+.spice-card-3d:hover,
+.spice-card:hover {
+  border-color: var(--c-gold-light);
+  box-shadow: 0 18px 45px rgba(212, 168, 50, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Haptic Form Field Focus Aura */
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--spice-saffron);
+  box-shadow: 0 0 16px var(--spice-saffron-glow), inset 0 0 8px rgba(244, 140, 6, 0.1);
+}
+
+/* ============================================================
+   AUTHENTIC SPICE BACKGROUND ATTRIBUTES & CULTURAL ORNAMENTS
+   ============================================================ */
+
+.spice-bg-attribute {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.18;
+  filter: saturate(1.2) contrast(1.1);
+  mix-blend-mode: screen;
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 15%, rgba(0,0,0,0.6) 45%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 15%, rgba(0,0,0,0.6) 45%, transparent 70%);
+  transition: opacity 0.8s ease, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.spice-bg-attribute img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating animation variants */
+.spice-bg-attribute.float-drift {
+  animation: spiceAttrDrift 16s ease-in-out infinite alternate;
+}
+
+.spice-bg-attribute.float-drift-reverse {
+  animation: spiceAttrDriftReverse 18s ease-in-out infinite alternate;
+}
+
+.spice-bg-attribute.float-pulse {
+  animation: spiceAttrPulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes spiceAttrDrift {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(-20px, 15px) rotate(4deg) scale(1.05); }
+  100% { transform: translate(15px, -15px) rotate(-3deg) scale(0.98); }
+}
+
+@keyframes spiceAttrDriftReverse {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(20px, -20px) rotate(-4deg) scale(1.06); }
+  100% { transform: translate(-15px, 15px) rotate(3deg) scale(0.96); }
+}
+
+@keyframes spiceAttrPulse {
+  0% { transform: scale(0.96); opacity: 0.14; }
+  50% { transform: scale(1.06); opacity: 0.22; }
+  100% { transform: scale(0.96); opacity: 0.14; }
+}
+
+/* Section Specific Placements */
+.spice-bg-attr--hero {
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  width: 650px;
+  height: 650px;
+  opacity: 0.22;
+}
+
+.spice-bg-attr--story {
+  top: 10%;
+  left: -8%;
+  width: 500px;
+  height: 500px;
+  opacity: 0.16;
+}
+
+.spice-bg-attr--chapter-moringa {
+  top: 20%;
+  right: -10%;
+  width: 580px;
+  height: 580px;
+}
+
+.spice-bg-attr--chapter-ajwain {
+  top: 15%;
+  left: -8%;
+  width: 540px;
+  height: 540px;
+}
+
+.spice-bg-attr--chapter-kalonji {
+  top: 25%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+}
+
+.spice-bg-attr--chapter-curry {
+  top: 10%;
+  left: -12%;
+  width: 680px;
+  height: 680px;
+}
+
+.spice-bg-attr--chapter-methi {
+  top: 20%;
+  right: -8%;
+  width: 550px;
+  height: 550px;
+}
+
+/* Jali Architectural Lattice Pattern */
+.bg-jali-lattice {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z M20 6 L34 20 L20 34 L6 20 Z' fill='%23D4AF37' fill-opacity='0.4' stroke='%23C4860B' stroke-width='0.5' fill-rule='evenodd'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23D4AF37' fill-opacity='0.6'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  animation: jaliGleam 20s linear infinite alternate;
+}
+
+@keyframes jaliGleam {
+  0% { opacity: 0.04; background-position: 0 0; }
+  50% { opacity: 0.08; }
+  100% { opacity: 0.04; background-position: 40px 40px; }
+}
+
+/* Royal Devanagari Mudra Seal Badge */
+.mudra-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle, rgba(30, 20, 10, 0.9) 0%, rgba(14, 10, 5, 0.95) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.4);
+  box-shadow: 0 0 20px rgba(196, 134, 11, 0.25), inset 0 0 12px rgba(212, 168, 50, 0.15);
+  flex-shrink: 0;
+}
+
+.mudra-seal__ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px dashed rgba(212, 168, 50, 0.45);
+  animation: sealRingRotate 24s linear infinite;
+  pointer-events: none;
+}
+
+.mudra-seal__char {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--c-gold-light);
+  text-shadow: 0 0 10px rgba(212, 168, 50, 0.6);
+  z-index: 1;
+}
+
+@keyframes sealRingRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Heritage Manuscript Corner Filigrees */
+.manuscript-card {
+  position: relative;
+}
+
+.manuscript-filigree {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  color: var(--c-gold);
+  opacity: 0.55;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.manuscript-filigree--tl { top: 8px; left: 8px; }
+.manuscript-filigree--tr { top: 8px; right: 8px; transform: scaleX(-1); }
+.manuscript-filigree--bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
+.manuscript-filigree--br { bottom: 8px; right: 8px; transform: scale(-1); }
+
+.manuscript-card:hover .manuscript-filigree {
+  opacity: 0.9;
+  color: var(--c-gold-light);
+}
+
+/* Curated Culinary Harmonies Pill Matrix */
+.culinary-pairings {
+  margin-top: 1.25rem;
+}
+
+.culinary-pairings__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ff-serif);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-gold-light);
+  margin-bottom: 0.75rem;
+}
+
+.culinary-pairings__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pairing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--r-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  color: var(--c-parchment-light);
+  transition: all 0.3s ease;
+}
+
+.pairing-pill::before {
+  content: '✦';
+  font-size: 0.65rem;
+  color: var(--c-gold);
+}
+
+.pairing-pill:hover {
+  background: rgba(212, 168, 50, 0.12);
+  border-color: var(--c-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 134, 11, 0.2);
+}
+
+/* ============================================================
+   HOMEPAGE STREAMLINED SPICE TREASURES GRID
+   ============================================================ */
+.home-spices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: clamp(1.8rem, 3vw, 2.5rem);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home-spice-card {
+  position: relative;
+  background: linear-gradient(165deg, rgba(26, 17, 9, 0.92) 0%, rgba(14, 10, 5, 0.96) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  border-radius: var(--r-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), inset 0 0 20px rgba(212, 168, 50, 0.03);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.45s ease;
+}
+
+.home-spice-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 168, 50, 0.55);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 168, 50, 0.16);
+}
+
+.home-spice-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #080603;
+  overflow: hidden;
+}
+
+.home-spice-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-spice-card:hover .home-spice-card__img {
+  transform: scale(1.05);
+}
+
+.home-spice-card__overlay {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  background: linear-gradient(to top, rgba(14, 10, 5, 0.95), transparent);
+  padding: 1.2rem 1rem 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-spice-card__bowl-inset {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--c-gold);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  transition: transform 0.4s ease;
+}
+
+.home-spice-card:hover .home-spice-card__bowl-inset {
+  transform: scale(1.12);
+  border-color: var(--c-gold-light);
+}
+
+.home-spice-card__bowl-inset img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-spice-card__badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+}
+
+.home-spice-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.home-spice-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-saffron);
+  margin-bottom: 0.5rem;
+}
+
+.home-spice-card__title {
+  font-family: var(--ff-heading);
+  font-size: 1.35rem;
+  color: var(--c-parchment);
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+
+.home-spice-card__tagline {
+  font-size: 0.86rem;
+  color: var(--c-gold);
+  margin-bottom: 0.85rem;
+  font-style: italic;
+}
+
+.home-spice-card__desc {
+  font-size: 0.88rem;
+  color: var(--c-text-dim);
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.home-spice-card__terroir {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  color: var(--c-gold-light);
+  padding: 0.5rem 0;
+  border-top: 1px dashed rgba(212, 168, 50, 0.2);
+  margin-bottom: 1.2rem;
+}
+
+.home-spice-card__actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+/* ============================================================
+   CULINARY ARTISTRY & LIVING RITUALS GALLERY (पाक कला और रसोई संस्कार)
+   ============================================================ */
+.culinary-artistry {
+  position: relative;
+  padding: clamp(5rem, 10vh, 8.5rem) 0;
+  background: radial-gradient(circle at 50% 15%, rgba(40, 24, 10, 0.85) 0%, rgba(14, 10, 5, 0.98) 75%), #0A0704;
+  border-top: 1px solid rgba(212, 168, 50, 0.2);
+  border-bottom: 1px solid rgba(212, 168, 50, 0.2);
+  overflow: hidden;
+}
+
+.culinary-artistry__header {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  position: relative;
+  z-index: 2;
+}
+
+.culinary-artistry__sanskrit {
+  font-family: var(--ff-devanagari);
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+  color: var(--c-gold-light);
+  letter-spacing: 0.14em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 16px rgba(212, 168, 50, 0.35);
+}
+
+.culinary-artistry__title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  line-height: 1.2;
+  color: var(--c-parchment);
+  margin: 0.75rem 0 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.culinary-artistry__subtitle {
+  color: var(--c-text-dim);
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.culinary-artistry__gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.culinary-artistry__divider-line {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+}
+
+.culinary-artistry__divider-lotus {
+  color: var(--c-gold-light);
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* --- Gallery Grid (2 Columns on desktop, 1 on mobile) --- */
+.culinary-artistry__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.8rem, 3vw, 2.5rem);
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .culinary-artistry__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --- Culinary Card --- */
+.culinary-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(165deg, rgba(26, 17, 9, 0.9) 0%, rgba(15, 10, 5, 0.95) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  border-radius: var(--r-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), inset 0 0 20px rgba(212, 168, 50, 0.03);
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.45s ease;
+}
+
+.culinary-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 168, 50, 0.55);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 168, 50, 0.18);
+}
+
+.culinary-card__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* --- Media Container --- */
+.culinary-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #050402;
+}
+
+.culinary-card__img-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.culinary-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  filter: brightness(0.96) contrast(1.04);
+}
+
+.culinary-card:hover .culinary-card__img {
+  transform: scale(1.06);
+  filter: brightness(1.02) contrast(1.06);
+}
+
+.culinary-card__media-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 10, 5, 0.1) 0%, rgba(14, 10, 5, 0.6) 80%, rgba(15, 10, 5, 0.95) 100%);
+  pointer-events: none;
+}
+
+/* --- Badge & Filigree Accents --- */
+.culinary-card__badge-wrap {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+}
+
+.culinary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(14, 10, 5, 0.85);
+  border: 1px solid rgba(212, 168, 50, 0.4);
+  border-radius: 999px;
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--c-gold-light);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.culinary-badge__icon {
+  font-size: 0.7rem;
+  color: var(--c-saffron);
+}
+
+.culinary-card__corner-accent {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--c-gold);
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.75;
+  transition: all 0.35s ease;
+}
+
+.culinary-card__corner--tl {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.culinary-card__corner--br {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.culinary-card:hover .culinary-card__corner-accent {
+  opacity: 1;
+  width: 18px;
+  height: 18px;
+  border-color: var(--c-gold-light);
+}
+
+/* --- Card Body & Typography Alignment --- */
+.culinary-card__content {
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.culinary-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.culinary-card__tag {
+  color: var(--c-saffron);
+  font-weight: 600;
+}
+
+.culinary-card__bullet {
+  color: rgba(212, 168, 50, 0.4);
+}
+
+.culinary-card__spice-label {
+  color: var(--c-gold-light);
+  font-weight: 500;
+}
+
+.culinary-card__title {
+  font-family: var(--ff-heading);
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  color: var(--c-parchment);
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.culinary-card__desc {
+  color: var(--c-text-dim);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+  flex-grow: 1;
+}
+
+/* --- Pairings & Harmonies --- */
+.culinary-card__pairings {
+  padding-top: 1.1rem;
+  border-top: 1px dashed rgba(212, 168, 50, 0.2);
+  margin-bottom: 1.2rem;
+}
+
+.culinary-card__pairings-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-gold);
+  margin-bottom: 0.7rem;
+}
+
+.culinary-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.culinary-card__pills .pairing-pill {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+}
+
+/* --- Card Sensory Footer --- */
+.culinary-card__footer {
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(212, 168, 50, 0.1);
+  font-size: 0.8rem;
+  color: var(--c-parchment-dark);
+  opacity: 0.85;
+}
+
+.culinary-card__note {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  line-height: 1.45;
+}
+
+.culinary-note-icon {
+  color: var(--c-gold-light);
+  font-size: 0.7rem;
+}
+
+/* --- Bottom Sanctuary Banner --- */
+.culinary-artistry__banner {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  background: linear-gradient(135deg, rgba(32, 20, 10, 0.92) 0%, rgba(16, 11, 6, 0.96) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.35);
+  border-radius: var(--r-md);
+  padding: clamp(2rem, 4vw, 3rem);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(212, 168, 50, 0.06);
+  text-align: center;
+  z-index: 2;
+}
+
+.culinary-artistry__banner::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(212, 168, 50, 0.15);
+  border-radius: calc(var(--r-md) - 4px);
+  pointer-events: none;
+}
+
+.culinary-artistry__banner-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--c-saffron);
+  margin-bottom: 0.75rem;
+}
+
+.culinary-artistry__banner-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  color: var(--c-gold-light);
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.culinary-artistry__banner-text {
+  color: var(--c-text-dim);
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto 1.8rem;
+}
+
+.culinary-artistry__banner-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Seal of Botanical Purity (शुद्धता संकल्प) */
+.purity-seal-section {
+  position: relative;
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #0A0704 0%, #140E07 50%, #0A0704 100%);
+  border-top: 1px solid rgba(212, 168, 50, 0.15);
+  border-bottom: 1px solid rgba(212, 168, 50, 0.15);
+  overflow: hidden;
+}
+
+.purity-seal-card {
+  position: relative;
+  background: rgba(18, 12, 6, 0.85);
+  border: 1px solid rgba(212, 168, 50, 0.3);
+  border-radius: var(--r-md);
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(212, 168, 50, 0.05);
+  backdrop-filter: blur(12px);
+  z-index: 1;
+}
+
+.purity-seal-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(212, 168, 50, 0.15);
+  border-radius: calc(var(--r-md) - 4px);
+  pointer-events: none;
+}
+
+.purity-seal-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.purity-seal-heading-group {
+  flex: 1;
+}
+
+.purity-seal-heading-group h3 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--c-gold-light);
+  margin-bottom: 0.4rem;
+}
+
+.purity-seal-heading-group p {
+  color: var(--c-text-dim);
+  font-size: 0.95rem;
+}
+
+.purity-credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.purity-credential-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 168, 50, 0.12);
+  transition: all 0.3s ease;
+}
+
+.purity-credential-item:hover {
+  background: rgba(212, 168, 50, 0.06);
+  border-color: rgba(212, 168, 50, 0.3);
+  transform: translateY(-2px);
+}
+
+.purity-credential-icon {
+  font-size: 1.25rem;
+  color: var(--c-gold);
+  line-height: 1;
+}
+
+.purity-credential-text h4 {
+  font-family: var(--ff-serif);
+  font-size: 1rem;
+  color: var(--c-parchment-light);
+  margin-bottom: 0.25rem;
+}
+
+.purity-credential-text p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--c-text-dim);
+  margin: 0;
+}
+
+/* Terroir Heritage Panorama */
+.terroir-panorama {
+  position: relative;
+  margin-top: 4rem;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  background: #0E0A05;
+}
+
+.terroir-panorama__media {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.terroir-panorama__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65) saturate(1.2);
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.terroir-panorama:hover .terroir-panorama__img {
+  transform: scale(1.04);
+}
+
+.terroir-panorama__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 10, 5, 0.3) 0%, rgba(14, 10, 5, 0.85) 75%, #0E0A05 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem;
+}
+
+.terroir-panorama__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(27, 67, 50, 0.7);
+  border: 1px solid rgba(82, 183, 136, 0.4);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--r-full);
+  color: #8FD8B3;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.terroir-panorama__title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--c-gold-light);
+  margin-bottom: 0.5rem;
+}
+
+.terroir-panorama__desc {
+  max-width: 680px;
+  color: var(--c-parchment-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   FOUNDER SHOWCASE — Pranav Pratap Singh
+   ============================================================ */
+.founder-profile-section {
+  position: relative;
+  padding: 4rem 0 6rem;
+}
+
+.founder-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 440px) 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 992px) {
+  .founder-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.founder-portrait-wrapper {
+  position: relative;
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.founder-portrait-frame {
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: #181109;
+  border: 1px solid rgba(212, 168, 50, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(196, 134, 11, 0.15);
+}
+
+.founder-portrait-frame::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(212, 168, 50, 0.18);
+  border-radius: calc(var(--r-md) - 4px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.founder-portrait-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: contrast(1.03) brightness(0.98);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+}
+
+.founder-portrait-frame:hover .founder-portrait-img {
+  transform: scale(1.025);
+  filter: contrast(1.06) brightness(1.02);
+}
+
+.founder-portrait-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.75rem 1.5rem 1.25rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(14, 10, 5, 0.88) 40%, rgba(14, 10, 5, 0.98) 100%);
+  border-top: 1px solid rgba(212, 168, 50, 0.2);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.founder-name-tag h3 {
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+  color: var(--c-parchment);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.founder-name-tag p {
+  font-family: var(--ff-body);
+  font-size: 0.8125rem;
+  color: var(--c-gold-light);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.founder-seal-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px dashed rgba(212, 168, 50, 0.6);
+  background: radial-gradient(circle, rgba(196, 134, 11, 0.25) 0%, rgba(14, 10, 5, 0.85) 100%);
+  font-family: var(--ff-devanagari);
+  font-size: 0.85rem;
+  color: var(--c-gold-light);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(212, 168, 50, 0.6);
+  box-shadow: 0 0 15px rgba(196, 134, 11, 0.2);
+  flex-shrink: 0;
+}
+
+.founder-intro-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.founder-quote-banner {
+  position: relative;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(135deg, rgba(28, 18, 8, 0.8) 0%, rgba(18, 12, 6, 0.95) 100%);
+  border-left: 3px solid var(--c-gold);
+  border-top: 1px solid rgba(212, 168, 50, 0.2);
+  border-right: 1px solid rgba(212, 168, 50, 0.12);
+  border-bottom: 1px solid rgba(212, 168, 50, 0.12);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(212, 168, 50, 0.04);
+}
+
+.founder-quote-banner p {
+  font-family: var(--ff-heading);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  color: var(--c-parchment);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.founder-quote-banner cite {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 0.8125rem;
+  color: var(--c-saffron);
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.founder-narrative-lead {
+  font-size: var(--fs-body-lg);
+  line-height: 1.8;
+  color: var(--c-parchment-dark);
+}
+
+.founder-pill-matrix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.founder-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--r-full);
+  background: rgba(212, 168, 50, 0.08);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  color: var(--c-parchment);
+  font-size: 0.825rem;
+  letter-spacing: 0.05em;
+}
+
+.founder-pill span {
+  color: var(--c-gold);
+}
+
+/* Chapter Styles */
+.founder-chapter {
+  position: relative;
+  margin-bottom: 5.5rem;
+}
+
+.founder-chapter-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+}
+
+.founder-chapter-badge {
+  display: inline-block;
+  font-family: var(--ff-heading);
+  font-size: 0.75rem;
+  color: var(--c-gold-light);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding: 0.25rem 1rem;
+  background: rgba(196, 134, 11, 0.1);
+  border-radius: var(--r-full);
+  border: 1px solid rgba(196, 134, 11, 0.25);
+}
+
+.founder-chapter-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--c-parchment);
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.founder-chapter-subtitle {
+  font-size: 1.05rem;
+  color: var(--c-text-dim);
+  line-height: 1.7;
+}
+
+/* Two-column editorial narrative */
+.editorial-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .editorial-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.editorial-col p {
+  font-size: var(--fs-body);
+  line-height: 1.85;
+  color: var(--c-text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.editorial-col p strong {
+  color: var(--c-parchment);
+}
+
+/* Lessons Cards List */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 168, 50, 0.15);
+  border-radius: var(--r-md);
+  transition: all 0.3s ease;
+}
+
+.lesson-item:hover {
+  background: rgba(212, 168, 50, 0.06);
+  border-color: rgba(212, 168, 50, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.lesson-num {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--c-gold);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.lesson-text h4 {
+  font-family: var(--ff-heading);
+  font-size: 1rem;
+  color: var(--c-parchment-light);
+  margin-bottom: 0.35rem;
+}
+
+.lesson-text p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--c-text-dim);
+  margin: 0;
+}
+
+/* Epiphany / Callout Box */
+.brand-epiphany-card {
+  position: relative;
+  margin: 3rem 0;
+  padding: 2.5rem;
+  background: radial-gradient(circle at 50% 50%, rgba(35, 22, 10, 0.85) 0%, rgba(14, 10, 5, 0.95) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.35);
+  border-radius: var(--r-md);
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(212, 168, 50, 0.05);
+}
+
+.brand-epiphany-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(212, 168, 50, 0.2);
+  border-radius: calc(var(--r-md) - 4px);
+  pointer-events: none;
+}
+
+.brand-epiphany-lead {
+  font-family: var(--ff-heading);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: var(--c-text-dim);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.brand-epiphany-headline {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  color: var(--c-gold-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(212, 168, 50, 0.4);
+}
+
+.brand-epiphany-sub {
+  font-size: 1.1rem;
+  color: var(--c-parchment);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* 4 Cornerstones Grid */
+.cornerstones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 1100px) {
+  .cornerstones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cornerstones-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cornerstone-card {
+  position: relative;
+  background: rgba(22, 15, 8, 0.8);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  border-radius: var(--r-md);
+  padding: 2.25rem 1.75rem;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.cornerstone-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 168, 50, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(196, 134, 11, 0.15);
+}
+
+.cornerstone-seal {
+  font-family: var(--ff-devanagari);
+  font-size: 1.1rem;
+  color: var(--c-gold);
+  margin-bottom: 1rem;
+  display: block;
+  opacity: 0.85;
+}
+
+.cornerstone-title {
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+  color: var(--c-parchment-light);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.cornerstone-quote {
+  font-family: var(--ff-heading);
+  font-size: 1.05rem;
+  color: var(--c-gold-light);
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.cornerstone-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--c-text-dim);
+  margin-top: auto;
+}
+
+/* Philosophy 3-Pillar Triptych */
+.philosophy-triptych {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 900px) {
+  .philosophy-triptych {
+    grid-template-columns: 1fr;
+  }
+}
+
+.philosophy-pillar-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(28, 18, 8, 0.7) 0%, rgba(18, 12, 6, 0.9) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  border-radius: var(--r-md);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.philosophy-pillar-card:hover {
+  border-color: var(--c-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(196, 134, 11, 0.15);
+}
+
+.philosophy-pillar-num {
+  font-family: var(--ff-display);
+  font-size: 1.75rem;
+  color: var(--c-gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.philosophy-pillar-title {
+  font-family: var(--ff-heading);
+  font-size: 1.35rem;
+  color: var(--c-parchment);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.philosophy-pillar-desc {
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: var(--c-text-dim);
+}
+
+/* Founder Epistle / Signed Letter */
+.founder-epistle-card {
+  position: relative;
+  max-width: 860px;
+  margin: 4rem auto;
+  background: radial-gradient(circle at top center, rgba(32, 22, 12, 0.92) 0%, rgba(14, 10, 5, 0.98) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.4);
+  border-radius: var(--r-md);
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), inset 0 0 40px rgba(196, 134, 11, 0.08);
+}
+
+.founder-epistle-card::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(212, 168, 50, 0.18);
+  border-radius: calc(var(--r-md) - 6px);
+  pointer-events: none;
+}
+
+.founder-epistle-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.founder-epistle-seal {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px dashed rgba(212, 168, 50, 0.6);
+  background: radial-gradient(circle, rgba(196, 134, 11, 0.2) 0%, rgba(14, 10, 5, 0.9) 100%);
+  color: var(--c-gold-light);
+  font-family: var(--ff-devanagari);
+  font-size: 1.25rem;
+  box-shadow: 0 0 20px rgba(196, 134, 11, 0.25);
+}
+
+.founder-epistle-body {
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.9;
+  color: var(--c-parchment-dark);
+  margin-bottom: 2.5rem;
+}
+
+.founder-epistle-body p {
+  margin-bottom: 1.5rem;
+}
+
+.founder-epistle-highlight {
+  font-family: var(--ff-heading);
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  color: var(--c-parchment-light);
+  font-style: italic;
+  padding: 1.5rem;
+  background: rgba(212, 168, 50, 0.06);
+  border-left: 3px solid var(--c-gold);
+  margin: 2rem 0;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+
+.founder-signoff {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(212, 168, 50, 0.2);
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.founder-signoff-name {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  color: var(--c-gold-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.founder-signoff-role {
+  font-family: var(--ff-heading);
+  font-size: 0.85rem;
+  color: var(--c-parchment-dark);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.founder-signoff-crest {
+  filter: brightness(1.2);
+  opacity: 0.9;
+}
+
+/* Expansion Platform & Vectors */
+.expansion-platform-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(30, 20, 10, 0.85) 0%, rgba(16, 11, 6, 0.95) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.35);
+  border-radius: var(--r-md);
+  padding: 2.25rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), inset 0 0 25px rgba(212, 168, 50, 0.06);
+}
+
+.expansion-seal {
+  font-family: var(--ff-devanagari);
+  font-size: 1rem;
+  color: var(--c-gold);
+  margin-bottom: 0.75rem;
+  display: block;
+  opacity: 0.9;
+}
+
+.expansion-vectors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 1100px) {
+  .expansion-vectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .expansion-vectors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.expansion-vector-card {
+  position: relative;
+  background: rgba(24, 16, 8, 0.75);
+  border: 1px solid rgba(212, 168, 50, 0.22);
+  border-radius: var(--r-md);
+  padding: 2rem 1.5rem;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.expansion-vector-card:hover {
+  border-color: var(--c-gold-light);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(196, 134, 11, 0.12);
+}
+
+.expansion-vector-icon {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--c-gold);
+  margin-bottom: 0.75rem;
+}
+
+.expansion-vector-card h4 {
+  font-family: var(--ff-heading);
+  font-size: 1.1rem;
+  color: var(--c-parchment-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.expansion-vector-card p {
+  font-size: 0.885rem;
+  line-height: 1.65;
+  color: var(--c-text-dim);
+  margin: 0;
+}
+
+/* ============================================================
+   BUKANU — Signature Proprietary Blend Styles
+   ============================================================ */
+.bukanu-spotlight {
+  position: relative;
+  padding: 4rem 0 6rem;
+}
+
+.bukanu-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 480px) 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 992px) {
+  .bukanu-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.bukanu-pkg-wrapper {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bukanu-pkg-frame {
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: #140E07;
+  border: 1px solid rgba(212, 168, 50, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(196, 134, 11, 0.18);
+}
+
+.bukanu-pkg-frame::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(212, 168, 50, 0.2);
+  border-radius: calc(var(--r-md) - 4px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bukanu-pkg-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+}
+
+.bukanu-pkg-frame:hover .bukanu-pkg-img {
+  transform: scale(1.03);
+}
+
+.bukanu-badge-secret {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  background: rgba(196, 134, 11, 0.15);
+  border: 1px solid var(--c-gold);
+  border-radius: var(--r-full);
+  font-family: var(--ff-heading);
+  font-size: 0.75rem;
+  color: var(--c-gold-light);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.bukanu-original-triptych {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .bukanu-original-triptych {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bukanu-original-card {
+  position: relative;
+  background: rgba(26, 17, 9, 0.75);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  border-radius: var(--r-md);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.bukanu-original-card:hover {
+  border-color: var(--c-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.bukanu-original-card h4 {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  color: var(--c-gold-light);
+  margin-bottom: 0.5rem;
+}
+
+.bukanu-original-card p {
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 5 Steps of the Bukanu Journey */
+.bukanu-journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.bukanu-step-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 2rem 2.25rem;
+  background: rgba(22, 15, 8, 0.8);
+  border: 1px solid rgba(212, 168, 50, 0.2);
+  border-radius: var(--r-md);
+  transition: all 0.35s ease;
+}
+
+@media (max-width: 600px) {
+  .bukanu-step-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+.bukanu-step-card:hover {
+  border-color: rgba(212, 168, 50, 0.45);
+  background: rgba(28, 19, 10, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.bukanu-step-num {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-gold);
+  line-height: 1;
+}
+
+.bukanu-step-content h4 {
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+  color: var(--c-parchment-light);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.bukanu-step-content p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--c-text-dim);
+  margin: 0;
+}
+
+/* Bukanu Distinction 3-Cards */
+.bukanu-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 900px) {
+  .bukanu-diff-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bukanu-diff-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(28, 18, 8, 0.7) 0%, rgba(18, 12, 6, 0.92) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.25);
+  border-radius: var(--r-md);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.bukanu-diff-card:hover {
+  border-color: var(--c-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(196, 134, 11, 0.15);
+}
+
+.bukanu-diff-icon {
+  font-family: var(--ff-devanagari);
+  font-size: 1.75rem;
+  color: var(--c-gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.bukanu-diff-title {
+  font-family: var(--ff-heading);
+  font-size: 1.35rem;
+  color: var(--c-parchment);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.bukanu-diff-desc {
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: var(--c-text-dim);
+}
+
+/* Usage & Rituals */
+.bukanu-ritual-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 1000px) {
+  .bukanu-ritual-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .bukanu-ritual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bukanu-ritual-card {
+  padding: 1.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 168, 50, 0.15);
+  border-radius: var(--r-sm);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.bukanu-ritual-card:hover {
+  background: rgba(212, 168, 50, 0.08);
+  border-color: rgba(212, 168, 50, 0.35);
+  transform: translateY(-2px);
+}
+
+.bukanu-ritual-glyph {
+  font-size: 1.5rem;
+  color: var(--c-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.bukanu-ritual-title {
+  font-family: var(--ff-heading);
+  font-size: 1.05rem;
+  color: var(--c-parchment-light);
+  margin-bottom: 0.35rem;
+}
+
+.bukanu-ritual-desc {
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+  line-height: 1.5;
+}
+
+/* 6-Card Differentiation Grid */
+.bukanu-diff-grid--6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 950px) {
+  .bukanu-diff-grid--6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bukanu-diff-grid--6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The Bukanu Experience (5 Sensory & Culinary Pillars) */
+.bukanu-exp-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 1100px) {
+  .bukanu-exp-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .bukanu-exp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bukanu-exp-card {
+  padding: 2rem 1.4rem;
+  background: linear-gradient(145deg, rgba(26, 18, 9, 0.7), rgba(14, 10, 5, 0.9));
+  border: 1px solid rgba(200, 140, 40, 0.2);
+  border-radius: var(--r-sm);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.bukanu-exp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.bukanu-exp-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 140, 40, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(200, 140, 40, 0.1);
+}
+
+.bukanu-exp-card:hover::before {
+  opacity: 1;
+}
+
+.bukanu-exp-tag {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 0.75rem;
+}
+
+.bukanu-exp-title {
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+  color: var(--c-parchment-light);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.05em;
+}
+
+.bukanu-exp-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--c-text-dim);
+}
+
+/* The Bukanu Philosophy (4 Tenets) */
+.bukanu-philosophy-banner {
+  background: linear-gradient(135deg, rgba(30, 20, 10, 0.85), rgba(14, 10, 5, 0.95));
+  border: 1px solid rgba(200, 140, 40, 0.35);
+  border-radius: var(--r-sm);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  margin: 3.5rem 0;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.bukanu-tenets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 900px) {
+  .bukanu-tenets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .bukanu-tenets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bukanu-tenet-item {
+  padding: 1.5rem 1.25rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-left: 2px solid var(--c-gold);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+
+.bukanu-tenet-title {
+  font-family: var(--ff-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-gold-light);
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.bukanu-tenet-desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--c-text-dim);
+}
+
+/* Secret Vault Card */
+.bukanu-secret-card {
+  background: linear-gradient(145deg, rgba(24, 16, 8, 0.95), rgba(10, 7, 4, 0.98));
+  border: 1px solid rgba(200, 140, 40, 0.4);
+  border-radius: var(--r-sm);
+  padding: clamp(2rem, 4vw, 3.25rem);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.8), 0 0 35px rgba(200, 140, 40, 0.1);
+  margin: 3.5rem 0;
+}
+
+.bukanu-secret-seal {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid var(--c-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-gold-light);
+  font-size: 1.5rem;
+  background: rgba(200, 140, 40, 0.1);
+  margin-bottom: 1.25rem;
+}
+
+/* Honest Goodness Box */
+.bukanu-honest-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(200, 140, 40, 0.2);
+  border-radius: var(--r-sm);
+  padding: 1.75rem 2rem;
+  margin: 2.5rem 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.bukanu-honest-icon {
+  font-size: 1.75rem;
+  color: var(--c-gold);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* ── Social Links Suite ── */
+.footer__social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.footer__social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 140, 40, 0.25);
+  color: var(--c-parchment-light);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer__social-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.footer__social-btn:hover {
+  transform: translateY(-2px);
+}
+
+.footer__social-btn:hover svg {
+  transform: scale(1.08);
+}
+
+.footer__social-btn.social--instagram:hover {
+  color: #fff;
+  border-color: #E1306C;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  box-shadow: 0 4px 14px rgba(225, 48, 108, 0.35);
+}
+
+.footer__social-btn.social--x:hover {
+  color: #fff;
+  border-color: #fff;
+  background: #000;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25);
+}
+
+.footer__social-btn.social--linkedin:hover {
+  color: #fff;
+  border-color: #0A66C2;
+  background: #0A66C2;
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.35);
+}
+
+.footer__social-btn.social--facebook:hover {
+  color: #fff;
+  border-color: #1877F2;
+  background: #1877F2;
+  box-shadow: 0 4px 14px rgba(24, 119, 242, 0.35);
+}
+
+/* Backward compatibility for text link */
+.footer__social-fb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--c-parchment-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 140, 40, 0.2);
+  border-radius: var(--r-sm);
+}
+
+.footer__social-fb:hover {
+  color: #1877f2;
+  border-color: rgba(24, 119, 242, 0.5);
+  background: rgba(24, 119, 242, 0.08);
+  transform: translateY(-2px);
+}
+
+.footer__social-fb svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* GST Badge */
+.gst-badge {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--c-gold-light);
+  background: rgba(200, 140, 40, 0.12);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(200, 140, 40, 0.3);
+}
+
+/* FSSAI Mark in Footer */
+.footer__fssai-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer__fssai-mark {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(212, 168, 50, 0.08);
+  border: 1px solid rgba(212, 168, 50, 0.28);
+  border-radius: 6px;
+  padding: 0.2rem 0.35rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+}
+
+.footer__fssai-mark:hover {
+  border-color: var(--c-gold);
+  background: rgba(212, 168, 50, 0.16);
+  box-shadow: 0 2px 10px rgba(196, 134, 11, 0.2);
+  transform: translateY(-1px);
+}
+
+.fssai-logo-pill {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 3px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  line-height: 0;
+}
+
+.fssai-logo-img {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+/* ============================================================
+   DEVANAGARI / HINDI SCRIPT RENDERING & FONTS
+   Ensures authentic typography, correct ligatures, and zero glyph corruption
+   ============================================================ */
+:lang(hi),
+[lang="hi"],
+.subpage-hero__lipi,
+.founder-seal-tag,
+.founder-epistle-seal,
+.cornerstone-seal,
+.expansion-seal,
+.mudra-seal__char,
+.sanskrit-char,
+.bukanu-diff-icon,
+.culinary-artistry__sanskrit {
+  font-family: var(--ff-devanagari);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.expansion-seal {
+  font-family: var(--ff-devanagari);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  color: var(--c-gold-light);
+  margin-bottom: 0.75rem;
+  display: block;
+  font-weight: 600;
+}
+
+.expansion-platform-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(28, 18, 8, 0.8) 0%, rgba(18, 12, 6, 0.95) 100%);
+  border: 1px solid rgba(212, 168, 50, 0.3);
+  border-radius: var(--r-md);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .mandala-svg,
+  .mandala-petals { animation: none !important; }
+
+  .marquee-track { animation: none !important; }
+
+  .reveal-section,
+  .reveal-text,
+  .word-reveal,
+  .char-reveal,
+  .sanskrit-char {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ornament-path,
+  .scripture-line,
+  .divider-path,
+  .chapter-border-rect {
+    stroke-dashoffset: 0 !important;
+  }
+}

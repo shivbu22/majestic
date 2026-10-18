@@ -1,0 +1,27 @@
+{
+  "name": "Majestic Essence | Global Bulk Spices",
+  "short_name": "Majestic",
+  "description": "Premier exporter and bulk wholesale supplier of single-origin Indian spices, high-curcumin turmeric, Tellicherry black pepper, and premium botanicals.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEFCF8",
+  "theme_color": "#FEFCF8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

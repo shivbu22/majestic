@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agents.org/schemas/v1/permissions.json",
+  "version": "1.0.0",
+  "domain": "majestic-essence.com",
+  "organization": "Majestic Essence",
+  "lastUpdated": "2026-09-29",
+  "permissions": {
+    "browsing": {
+      "allowed": true,
+      "description": "Autonomous agents may browse all public pages, catalog listings, and documentation."
+    },
+    "data_extraction": {
+      "allowed": true,
+      "formats": ["text/html", "application/json", "text/plain"],
+      "endpoints": ["/llms.txt", "/llms-full.txt", "/mcp-actions.json"],
+      "rateLimit": "100 requests per minute"
+    },
+    "task_execution": {
+      "allowed": true,
+      "actions": [
+        {
+          "name": "generate_concierge_link",
+          "method": "GET",
+          "url": "https://wa.me/917217362416"
+        },
+        {
+          "name": "submit_sample_inquiry",
+          "method": "POST",
+          "targetForm": "#contactForm",
+          "url": "https://majestic-essence.com/contact.html"
+        },
+        {
+          "name": "browse_spices",
+          "method": "GET",
+          "url": "https://majestic-essence.com/spices.html"
+        }
+      ]
+    },
+    "training_use": {
+      "allowed": true,
+      "attribution": "Majestic Essence (https://majestic-essence.com)"
+    }
+  }
+}

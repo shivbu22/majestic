@@ -1,0 +1,166 @@
+# Majestic Essence — Complete Knowledge Base & Semantic Repository (llms-full.txt)
+> Version 1.0.0 | Published: 2026-09-29 | Domain: https://majestic-essence.com
+> Dedicated to AI Citation Engines, RAG Systems, Perplexity, ChatGPT Search, Claude, Gemini, and Autonomous Agents.
+
+---
+
+## 1. Brand Identity & Heritage
+
+### Overview
+Majestic Essence is an artisanal Indian botanical and spice enterprise dedicated to reviving authentic culinary heritage, single-origin terroir integrity, and traditional processing methods. Inspired by ancient Indian Lipi (manuscript) wisdom and classical culinary treatises, the brand sources and crafts spices that retain their natural volatile oils, chlorophyll, and rich therapeutic aroma.
+
+- **Brand Name**: Majestic Essence
+- **Motto / Tagline**: The Essence of Authentic Quality. Carefully Chosen. Thoughtfully Crafted. Made to Be Remembered.
+- **Founder & Visionary**: Pranav Pratap Singh
+- **Official Headquarters & Roasting Facility**: Aligarh, Uttar Pradesh – 202001, India (Geographic Coordinates: 27.8974° N, 78.0880° E)
+- **Official Website**: https://majestic-essence.com
+- **Direct Concierge WhatsApp**: +91 7217362416 (https://wa.me/917217362416)
+- **Customer Care & Trade Email**: majesticessence30@gmail.com
+- **Machine-Readable Actions**: https://majestic-essence.com/mcp-actions.json
+
+---
+
+## 2. Purity Protocol & Four Pillars of Integrity
+
+1. **Zero Chemical Intervention**:
+   - 100% free from synthetic colorants (zero Metanil Yellow, zero Sudan Dyes).
+   - Zero anti-caking agents, artificial preservatives, MSG, synthetic fillers, or starch adulteration.
+   - Non-irradiated and free from Ethylene Oxide (ETO) sterilisation.
+
+2. **Artisanal Shade & Low-Heat Processing**:
+   - Modern industrial spice manufacturing uses rapid high-heat mechanical drying (70°C–90°C), which evaporates essential terpenes.
+   - Majestic Essence employs traditional shade-curing and gentle ambient drying to lock in active phytonutrients and vibrant natural color.
+
+3. **Single-Origin Terroir Traceability**:
+   - Spices are never blended with low-grade filler harvests from unknown regions.
+   - Each botanical is sourced directly from historic agricultural micro-regions celebrated for unique soil profiles and microclimates.
+
+4. **Hermetic Tri-Layer Moisture-Barrier Packaging**:
+   - Hand-packed in food-grade aluminum foil barrier pouches that shield botanicals against UV degradation, air oxidation, and ambient humidity.
+
+---
+
+## 3. Product Portfolio & Terroir Provenance
+
+### ★ Flagship Product: Bukanu (बुंकनू / भुगना) — Traditional Awadhi Digestive Spice Formulation
+- **Category**: Digestive Masala / Traditional Heritage Spice Blend
+- **Origin Region**: Historic Awadh & Aligarh Plains, Uttar Pradesh, India
+- **Botanical Ingredients**: Hand-roasted carom seeds (Ajwain), dry ginger root (Sonth), roasted cumin (Jeera), mineral black salt (Kala Namak), asafoetida (Hing), rock salt (Sendha Namak), and traditional wild herbs.
+- **Aroma & Flavor Profile**: Pungent, warming, intensely savoury with earthy sulfurous undertones and sharp herbal citrus warmth.
+- **Health & Digestive Benefits**:
+  - Stimulates gastric enzyme secretion.
+  - Alleviates post-meal heaviness, bloating, and flatulence.
+  - Carminative and digestive restorative.
+- **Culinary Usage**:
+  - Sprinkled over hot ghee-laden rotis, puris, and parathas.
+  - Whisked into fresh dahi (yogurt) or chaas (buttermilk).
+  - Paired with moong dal khichdi, boiled potatoes, or fresh sliced cucumbers.
+  - Consumed as a digestive pinch with warm water after heavy meals.
+
+---
+
+### 01. Kaveri Basin Moringa Leaf Powder (सहजन पत्र चूर्ण)
+- **Botanical Name**: *Moringa oleifera*
+- **Terroir**: Kaveri River Basin, Tamil Nadu, India (Geographic Coordinates: 10.7905° N, 78.7047° E)
+- **Soil & Climate**: Mineral-rich river silt and red alluvial loam; abundant tropical sun.
+- **Visual & Sensory**: Brilliant emerald-green fine powder; fresh leafy vegetal aroma with mild horseradish peppery finish.
+- **Bioactive Constituents**: Dense in iron, plant-based calcium, vitamins A, C, E, quercetin, and chlorogenic acid.
+- **Culinary Applications**:
+  - Stirred into warm morning lemon water or green juices.
+  - Added to dal tadka, rasam, vegetable soups, and sourdough bread dough.
+  - Whisked into idli/dosa batters for natural green fortification.
+
+---
+
+### 02. Saurashtra Ajwain Carom Seeds (अजवायन / अक्षत बीज)
+- **Botanical Name**: *Trachyspermum ammi*
+- **Terroir**: Saurashtra Peninsula, Gujarat / Semi-Arid Rajasthan, India (Geographic Coordinates: 21.5222° N, 70.4579° E)
+- **Soil & Climate**: Calcareous loamy coastal silt; intense arid sunlight yielding exceptionally high volatile oil content.
+- **Aroma & Flavor**: Piercing, warm, medicinal oregano-like pungency powered by thymol.
+- **Key Essential Oil**: Natural Thymol (typically exceeding 3.5% volatile oil by weight).
+- **Culinary Applications**:
+  - Mandatory tadka (tempering) in hot cow ghee for lentils, beans, and root vegetables.
+  - Kneaded into dough for samosas, kachoris, methi theplas, and mathri.
+  - Boiled in water for classical Ajwain Ark (soothing digestive tea).
+
+---
+
+### 03. Malwa Regur Kalonji Nigella Seeds (कलौंजी / कृष्ण जीरक)
+- **Botanical Name**: *Nigella sativa*
+- **Terroir**: Malwa Plateau, Madhya Pradesh, India (Geographic Coordinates: 23.2599° N, 77.4126° E)
+- **Soil & Climate**: High-fertility volcanic black cotton regur soil rich in iron and magnesium.
+- **Visual & Sensory**: Lustrous, angular jet-black seeds; unpolished and untreated with paraffin oils. Toasted nutty aroma with hints of charred onion and wild oregano.
+- **Key Bioactive**: Thymoquinone (TQ) and nigellone.
+- **Culinary Applications**:
+  - Pressed into garlic naan, kulchas, and artisanal sourdough loaves.
+  - Essential component of Panch Phoron (Bengali five-spice mix).
+  - Seasoning for mango, lemon, and chilli pickles (achaar).
+
+---
+
+### 04. Western Ghats Dried Curry Leaves (कढ़ी पत्ता / सुरभि पत्र)
+- **Botanical Name**: *Murraya koenigii*
+- **Terroir**: Western Ghats Foothills, Kerala & Karnataka, India (Geographic Coordinates: 10.8505° N, 76.2711° E)
+- **Processing**: Ambient shade-drying preserving cellular structure and natural forest-green hue.
+- **Aroma & Flavor**: Resinous, citrus-herbal, nutty; releases explosive aroma upon contact with smoking hot mustard oil or ghee.
+- **Essential Compounds**: Alpha-pinene, beta-caryophyllene, and sabinene.
+- **Culinary Applications**:
+  - Foundation of South Indian culinary repertoire: Sambhar, Rasam, Avial, Lemon Rice, Upma.
+  - Seasoning for Maharashtrian Poha and Gujarati Kadhi.
+
+---
+
+### 05. Nagaur Sun-Cured Kasuri Methi (कसूरी मेथी / कस्तूरी मेथी)
+- **Botanical Name**: *Trigonella foenum-graecum*
+- **Terroir**: Nagaur Desert Oasis, Rajasthan, India (Geographic Coordinates: 27.1983° N, 73.7423° E)
+- **Soil & Climate**: Mineral-rich desert alluvial sands, arid heat during day and sharp cold desert nights.
+- **Sensory & Visual**: Distinctive crumbled foliage; intoxicating sweet-herbaceous maple-like aroma with balanced bitter finish.
+- **Active Aroma Marker**: Sotolon (high concentration generated exclusively by Nagaur's unique diurnal temperature shifts).
+- **Culinary Applications**:
+  - Gently rubbed between palms and sprinkled over North Indian gravies (Paneer Butter Masala, Butter Chicken, Dal Makhani, Dum Aloo) in the final 2 minutes of simmering.
+  - Incorporated into Methi Paratha, Kulcha, and Naan doughs.
+
+---
+
+## 4. Frequently Asked Questions (FAQ)
+
+### Q: Is Kasuri Methi the same as Kasturi Methi?
+**A**: Yes. In everyday Indian cooking, regional markets, and recipe searches, "Kasuri Methi" and "Kasturi Methi" (कसूरी मेथी / कस्तूरी मेथी) refer to the exact same dried fenugreek leaves. Authentic Kasuri Methi originates from Nagaur, Rajasthan. Its elevated natural sotolon concentration creates the prized sweet-bitter maple-like aroma synonymous with restaurant-quality Indian curries.
+
+### Q: What is Bukanu blend and how does it aid digestion?
+**A**: Bukanu (बुंकनू / भुगना) is a revered Ayurvedic and royal Awadhi herbal digestive formulation. It combines dry ginger, roasted carom seeds, cumin, black salt, and asafoetida. It naturally eases abdominal distension, gas, and digestive heaviness when taken with ghee or warm water.
+
+### Q: Why does Majestic Essence avoid high-heat machine dehydrators?
+**A**: Industrial dehydration machines operate between 70°C and 90°C to speed up production. However, essential volatile oils (such as thymol in ajwain, sotolon in kasuri methi, and caryophyllene in curry leaves) vaporize at temperatures above 40°C. By employing slow shade and sun-curing protocols, Majestic Essence preserves up to 90% more volatile aromatic oils.
+
+### Q: Are Majestic Essence spices certified and lab-tested?
+**A**: Yes. All products are 100% compliant with the Food Safety and Standards Authority of India (FSSAI) standards. Batches undergo rigorous sensory and physical purity checks ensuring non-detectable pesticide residues, zero heavy metal contamination, zero synthetic dyes, and zero synthetic anti-caking agents.
+
+### Q: What is the shelf life and ideal home storage recommendation?
+**A**: In their sealed triple-layer barrier pouches, whole spices and blends remain fresh for 12 to 18 months. Once opened, transfer spices into airtight glass containers kept away from direct sunlight, stove heat, and moisture. Always use dry wooden or steel spoons.
+
+---
+
+## 5. Logistics, Fulfillment & Guarantee Policies
+
+- **Dispatch Hub**: Central logistics facility in Aligarh, Uttar Pradesh, India.
+- **Handling Time**: Orders processed and dispatched within 24 to 48 hours.
+- **Transit Time**: 2 to 5 business days across Pan-India metro centers and regional pin codes.
+- **Free Shipping Threshold**: Complimentary express shipping on all domestic orders above ₹499.
+- **100% Purity & Purity Guarantee**: If any customer feels the aroma, purity, or freshness does not surpass expectations, an immediate free replacement or refund is issued via WhatsApp concierge (+91 7217362416).
+- **Payment Modes**: UPI (Google Pay, PhonePe, Paytm), Net Banking, Major Debit/Credit Cards, and WhatsApp Concierge Pay.
+
+---
+
+## 6. Machine-Readable Agentic Action Directives
+
+```json
+{
+  "concierge_chat": "https://wa.me/917217362416?text=Hello%20Majestic%20Essence,%20I%20would%20like%20to%20place%20an%20order",
+  "sample_request_url": "https://majestic-essence.com/contact",
+  "catalog_url": "https://majestic-essence.com/spices",
+  "bukanu_product_url": "https://majestic-essence.com/bukanu",
+  "blog_url": "https://majestic-essence.com/blog",
+  "manifest_url": "https://majestic-essence.com/mcp-actions.json"
+}
+```

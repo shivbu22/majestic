@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Core Pages -->
+  <url>
+    <loc>https://majestic-essence.com/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/ourstory</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/founder</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/spices</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/upscaled-spice-frame.webp</image:loc>
+      <image:title>The Majestic Essence Spice Collection</image:title>
+      <image:caption>Hand-selected single-origin Indian spices and artisanal Bukanu formulation</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/blog</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Flagship Blends & Products -->
+  <url>
+    <loc>https://majestic-essence.com/bukanu</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/bukanu.webp</image:loc>
+      <image:title>Majestic Essence Bukanu Premium Herbal Digestive Blend</image:title>
+      <image:caption>Authentic handcrafted Bukanu digestive blend packaging</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/bukanu-bowl.webp</image:loc>
+      <image:title>Bukanu Masala Blend in Traditional Katori</image:title>
+      <image:caption>Freshly roasted Bukanu spice blend texture and volatile aroma</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/moringa</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/moringa.webp</image:loc>
+      <image:title>Majestic Essence Moringa Leaf Powder 100g Pack</image:title>
+      <image:caption>Emerald pure shade-dried moringa leaf powder packaging</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/moringa-bowl.webp</image:loc>
+      <image:title>Pure Moringa Oleifera Leaf Powder in Artisan Bowl</image:title>
+      <image:caption>Raw stone-milled Kaveri basin moringa powder texture</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/ajwain</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/ajwain.webp</image:loc>
+      <image:title>Majestic Essence Ajwain Carom Seeds 100g Pack</image:title>
+      <image:caption>Sun-ripened Saurashtra ajwain carom seeds premium pack</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/ajwain-bowl.webp</image:loc>
+      <image:title>Selected Whole Ajwain Seeds in Rustic Ceramic</image:title>
+      <image:caption>Aromatic thymol-rich carom seeds for tempering and digestive doughs</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/kalonji</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/kalonji.webp</image:loc>
+      <image:title>Majestic Essence Kalonji Nigella Seeds 100g Pack</image:title>
+      <image:caption>Lustrous jet-black Malwa regur nigella sativa seeds pack</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/kalonji-bowl.webp</image:loc>
+      <image:title>Whole Black Kalonji Cumin Seeds in Traditional Bowl</image:title>
+      <image:caption>Aroma-sealed nigella seeds with rich herbal notes</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/curry-leaves</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/curry-leaves.webp</image:loc>
+      <image:title>Majestic Essence Dried Curry Leaves 100g Pack</image:title>
+      <image:caption>Western Ghats whole shade-dried sweet neem curry leaves packaging</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/curry-leaves-bowl.webp</image:loc>
+      <image:title>Shade-Cured Whole Curry Leaves in Artisan Vessel</image:title>
+      <image:caption>Fragrant whole intact curry leaves retaining natural green volatiles</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/kasuri-methi</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/kasuri-methi.webp</image:loc>
+      <image:title>Majestic Essence Kasuri Methi 100g Pack</image:title>
+      <image:caption>Nagaur sun-cured golden-green fenugreek leaves packaging</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://majestic-essence.com/images/products/kasuri-methi-bowl.webp</image:loc>
+      <image:title>Sun-Cured Kasuri Methi Leaves in Antique Brass Katori</image:title>
+      <image:caption>Intensely aromatic culinary fenugreek leaves for parathas and gravies</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Concierge & Informational -->
+  <url>
+    <loc>https://majestic-essence.com/faq</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/contact</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/shipping</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Legal & Policies -->
+  <url>
+    <loc>https://majestic-essence.com/privacy</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://majestic-essence.com/terms</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>

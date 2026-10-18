@@ -1,0 +1,1118 @@
+{
+  "pages": {
+    "404.html": {
+      "title": "404 \u2014 Page Not Found | Majestic Essence",
+      "meta_desc": "The manuscript or botanical page you are seeking could not be located. Return to the Majestic Essence spice vault.",
+      "canonical": "",
+      "h1": [
+        "404"
+      ],
+      "h2_count": 1,
+      "images": [
+        {
+          "src": "/images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "/images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "/images/fssai-logo.png",
+          "alt": "FSSAI Certified",
+          "width": "60",
+          "height": "24",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 0,
+      "internal_links": 38,
+      "word_count": 194
+    },
+    "about.html": {
+      "title": "Redirecting to Our Story | Majestic Essence",
+      "meta_desc": "",
+      "canonical": "https://majestic-essence.com/ourstory.html",
+      "h1": [],
+      "h2_count": 0,
+      "images": [],
+      "schema_blocks": 0,
+      "internal_links": 1,
+      "word_count": 14
+    },
+    "ajwain.html": {
+      "title": "Ajwain Carom Seeds | \u0905\u091c\u0935\u093e\u092f\u0928 | Pure Whole Rajasthan Ajwain | Majestic Essence",
+      "meta_desc": "Single-origin Saurashtra / Rajasthan Ajwain carom seeds by Majestic Essence. High natural thymol content for authentic Indian cooking, parathas, and natural digestive relief.",
+      "canonical": "https://majestic-essence.com/ajwain",
+      "h1": [
+        "Ajwain Carom Seeds"
+      ],
+      "h2_count": 1,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/clove.webp",
+          "alt": "Sensory Clove Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/ajwain.webp",
+          "alt": "Majestic Essence Ajwain Carom Seeds 100g premium packaging box",
+          "width": "1254",
+          "height": "1254",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/ajwain-bowl.webp",
+          "alt": "Aromatic whole Ajwain carom seeds in a vintage hammered brass bowl",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 29,
+      "word_count": 508
+    },
+    "blog.html": {
+      "title": "Culinary Journal & Spice Chronicles | Majestic Essence",
+      "meta_desc": "Explore the Majestic Essence Culinary Journal: Ancient Indian botanical wisdom, single-origin spice harvesting, Ayurvedic culinary alchemy, and the living heritage of Bukanu.",
+      "canonical": "https://majestic-essence.com/blog",
+      "h1": [
+        "Culinary Journal & Botanical Wisdom"
+      ],
+      "h2_count": 5,
+      "images": [
+        {
+          "src": "/images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "/images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "/images/fssai-logo.png",
+          "alt": "FSSAI Certified",
+          "width": "60",
+          "height": "24",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 39,
+      "word_count": 446
+    },
+    "bukanu.html": {
+      "title": "Bukanu Masala | Heritage Herbal Digestive Spice Blend (Kala Namak, Ajwain, Sonth) | Majestic Essence",
+      "meta_desc": "Authentic Bukanu digestive spice blend by Majestic Essence. Crafted from slow-roasted ajwain, cumin, black salt (kala namak), and dry ginger for everyday digestive wellness.",
+      "canonical": "https://majestic-essence.com/bukanu",
+      "h1": [
+        "Majestic Essence \u2014 Bukanu"
+      ],
+      "h2_count": 10,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/clove.webp",
+          "alt": "Sensory Clove Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/bukanu.webp",
+          "alt": "Majestic Essence Bukanu \u2014 Premium Herbal Digestive Blend 100g Packaging Box",
+          "width": "1024",
+          "height": "1024",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/bukanu-bowl.webp",
+          "alt": "Authentic Bukanu herbal digestive spice blend overflowing in an antique brass katori bowl with roasted spices and mineral salts",
+          "width": "1376",
+          "height": "768",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Mark",
+          "width": "60",
+          "height": "30",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 32,
+      "word_count": 1478
+    },
+    "contact.html": {
+      "title": "Contact & Inquiries | Majestic Essence \u2014 WhatsApp & Direct Trade",
+      "meta_desc": "Get in touch with Majestic Essence. Connect via direct WhatsApp, request sample kits, or send wholesale and culinary inquiries.",
+      "canonical": "https://majestic-essence.com/contact",
+      "h1": [
+        "Get in Touch"
+      ],
+      "h2_count": 2,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/cardamom.webp",
+          "alt": "Sensory Green Cardamom Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/cinnamon.webp",
+          "alt": "Sensory Cinnamon Bark Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat with Majestic Essence on WhatsApp",
+          "width": "130",
+          "height": "130",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "60",
+          "height": "30",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Mark",
+          "width": "60",
+          "height": "30",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 28,
+      "word_count": 317
+    },
+    "curry-leaves.html": {
+      "title": "Dried Curry Leaves | \u0915\u0922\u093c\u0940 \u092a\u0924\u094d\u0924\u093e | Aromatic Tadka Foliage | Majestic Essence",
+      "meta_desc": "Discover premium Dried Curry Leaves by Majestic Essence. Shade-cured from tropical Deccan groves to lock in citrus-herbal aroma and natural green hue. Send inquiry or order direct.",
+      "canonical": "https://majestic-essence.com/curry-leaves",
+      "h1": [
+        "Dried Curry Leaves"
+      ],
+      "h2_count": 1,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/origins/hero.webp",
+          "alt": "Authentic Indian Spice Terroir Origins",
+          "width": "1376",
+          "height": "768",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/curry-leaves.webp",
+          "alt": "Majestic Essence Dried Curry Leaves 100g premium packaging box",
+          "width": "1371",
+          "height": "1148",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/curry-leaves-bowl.webp",
+          "alt": "Fresh glossy green Curry Leaves in a handcrafted terracotta bowl",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 29,
+      "word_count": 488
+    },
+    "faq.html": {
+      "title": "Frequently Asked Questions & Purity Guide | Majestic Essence",
+      "meta_desc": "Official FAQ & Purity Guide for Majestic Essence. Learn about single-origin sourcing, shade-drying, stone-grinding, storage, FSSAI compliance, and WhatsApp ordering.",
+      "canonical": "https://majestic-essence.com/faq",
+      "h1": [
+        "Frequently Asked Questions & Purity Guide"
+      ],
+      "h2_count": 6,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "36",
+          "height": "24",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Mark",
+          "width": "60",
+          "height": "30",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 27,
+      "word_count": 1115
+    },
+    "founder.html": {
+      "title": "Founder & Vision | Majestic Essence \u2014 Pranav Pratap Singh",
+      "meta_desc": "Meet Pranav Pratap Singh, Founder of Majestic Essence. Learn about his journey, vision for authentic Indian quality, continuous learning, and dedication to building an enduring global brand.",
+      "canonical": "https://majestic-essence.com/founder",
+      "h1": [
+        "The Founder's Journey"
+      ],
+      "h2_count": 8,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/clove.webp",
+          "alt": "Sensory Clove Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/founder/pranav.webp",
+          "alt": "Pranav Pratap Singh, Founder of Majestic Essence",
+          "width": "800",
+          "height": "1067",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Crest",
+          "width": "56",
+          "height": "36",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Crest",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 31,
+      "word_count": 1449
+    },
+    "index.html": {
+      "title": "Majestic Essence | Authentic Indian Spices & Bukanu Blend",
+      "meta_desc": "Discover Majestic Essence: single-origin, hand-selected Indian spices and royal Bukanu digestive blend. 100% natural, lab-tested, and aroma-sealed from India.",
+      "canonical": "https://majestic-essence.com/",
+      "h1": [
+        "MAJESTICESSENCE"
+      ],
+      "h2_count": 4,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/upscaled-spice-frame.webp",
+          "alt": "Artisanal Indian spice border with whole cardamom, cinnamon, and star anise",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/cardamom.webp",
+          "alt": "Sensory Green Cardamom Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/bukanu.webp",
+          "alt": "Majestic Essence Bukanu Premium Herbal Digestive Blend packaging box",
+          "width": "1024",
+          "height": "858",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/culinary/tadka-sizzle.webp",
+          "alt": "A sizzling golden tadka tempering in an antique brass ladle with fragrant curry leaves and roasted ajwain",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/culinary/bukanu-dahi.webp",
+          "alt": "Rich velvety clay pot dahi curd dusted with Bukanu signature digestive spice blend, fresh mint, and brass spoon",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/culinary/paratha-methi.webp",
+          "alt": "Golden flaky layered parathas brushed with pure ghee and crushed Kasuri Methi on hammered bronze thali",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/culinary/brass-dabba.webp",
+          "alt": "Antique carved brass masala dabba with pristine compartments of moringa, kalonji, ajwain, and curry leaves",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/upscaled-spice-frame.webp",
+          "alt": "Majestic Essence heritage botanical spice assortment frame",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Mark",
+          "width": "60",
+          "height": "30",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 31,
+      "word_count": 1019
+    },
+    "kalonji.html": {
+      "title": "Kalonji (Nigella Seeds) | \u0915\u0932\u094c\u0902\u091c\u0940 | Jet-Black Pure Seeds | Majestic Essence",
+      "meta_desc": "Discover pure Kalonji Nigella Seeds by Majestic Essence. Unpolished, jet-black seeds rich in natural thymoquinone oils. Distinctive toasted onion-peppery aroma. Send inquiry or order direct.",
+      "canonical": "https://majestic-essence.com/kalonji",
+      "h1": [
+        "Kalonji Nigella Seeds"
+      ],
+      "h2_count": 1,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/cinnamon.webp",
+          "alt": "Sensory Cinnamon Bark Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/kalonji.webp",
+          "alt": "Majestic Essence Kalonji Nigella Seeds 100g premium packaging box",
+          "width": "1371",
+          "height": "1147",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/kalonji-bowl.webp",
+          "alt": "Glistening jet-black Kalonji nigella seeds in an antique dark ceramic bowl",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 29,
+      "word_count": 489
+    },
+    "kasuri-methi.html": {
+      "title": "Kasuri Methi (Kasturi Methi) | \u0915\u0938\u0942\u0930\u0940 \u092e\u0947\u0925\u0940 | Premium Nagaur Fenugreek Leaves | Majestic Essence",
+      "meta_desc": "Discover authentic Nagaur Kasuri Methi (widely searched as Kasturi Methi) by Majestic Essence. Naturally cured dried fenugreek leaves with rich aroma for curries, dal makhani & paneer.",
+      "canonical": "https://majestic-essence.com/kasuri-methi",
+      "h1": [
+        "Kasuri Methi"
+      ],
+      "h2_count": 1,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/chili.webp",
+          "alt": "Sensory Sun-Dried Whole Chili Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/kasuri-methi.webp",
+          "alt": "Majestic Essence Kasuri Methi 100g premium packaging box",
+          "width": "1254",
+          "height": "1254",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/kasuri-methi-bowl.webp",
+          "alt": "Sun-cured golden-green Kasuri Methi fenugreek leaves in an antique brass katori",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 29,
+      "word_count": 510
+    },
+    "moringa.html": {
+      "title": "Moringa Leaf Powder | \u0938\u0939\u091c\u0928 \u092a\u0924\u094d\u0930 \u091a\u0942\u0930\u094d\u0923 | 100% Pure Superfood | Majestic Essence",
+      "meta_desc": "Discover pure Moringa Leaf Powder by Majestic Essence. Single-origin, shade-dried, and micro-milled from the Western Ghats. 100% natural with no additives. Send inquiry or order direct.",
+      "canonical": "https://majestic-essence.com/moringa",
+      "h1": [
+        "Moringa Leaf Powder"
+      ],
+      "h2_count": 1,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/cardamom.webp",
+          "alt": "Sensory Green Cardamom Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/moringa.webp",
+          "alt": "Majestic Essence Moringa Leaf Powder 100g premium packaging box",
+          "width": "1312",
+          "height": "1199",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/moringa-bowl.webp",
+          "alt": "Pure raw Moringa leaf powder in a traditional rustic bowl",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 29,
+      "word_count": 496
+    },
+    "ourstory.html": {
+      "title": "Our Story & Botanical Heritage | Majestic Essence Spices",
+      "meta_desc": "Discover Majestic Essence: single-origin Indian spices and heritage Bukanu blend sourced directly from regional agrarian heartlands. FSSAI certified purity.",
+      "canonical": "https://majestic-essence.com/ourstory",
+      "h1": [
+        "The Soul of Majestic Essence"
+      ],
+      "h2_count": 2,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/cinnamon.webp",
+          "alt": "Sensory Cinnamon Bark Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/cardamom.webp",
+          "alt": "Sensory Green Cardamom Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Mark",
+          "width": "60",
+          "height": "30",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 29,
+      "word_count": 499
+    },
+    "privacy.html": {
+      "title": "Privacy Policy & Data Protection | Majestic Essence",
+      "meta_desc": "Read the official Privacy Policy of Majestic Essence. Learn how we protect customer communications, order data, and privacy under India's DPDP Act 2023 and GDPR.",
+      "canonical": "https://majestic-essence.com/privacy",
+      "h1": [
+        "Privacy Policy"
+      ],
+      "h2_count": 8,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 26,
+      "word_count": 737
+    },
+    "shipping.html": {
+      "title": "Shipping & Delivery Policy | Majestic Essence",
+      "meta_desc": "Discover Majestic Essence shipping & delivery standards: meticulous hand-packing, aroma-sealed barrier packaging, 3-5 day pan-India dispatch, and WhatsApp tracking.",
+      "canonical": "https://majestic-essence.com/shipping",
+      "h1": [
+        "Shipping & Delivery Policy"
+      ],
+      "h2_count": 9,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Mark",
+          "width": "60",
+          "height": "30",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 27,
+      "word_count": 968
+    },
+    "spices.html": {
+      "title": "The Spice Collection & Bukanu | Majestic Essence \u2014 Authentic Indian Herbs & Spices",
+      "meta_desc": "Explore Majestic Essence's curated collection of authentic Indian spices and our signature proprietary formulation: Bukanu Herbal Digestive Blend, Moringa, Ajwain, Kalonji, Curry Leaves, and Kasuri Methi.",
+      "canonical": "https://majestic-essence.com/spices",
+      "h1": [
+        "The Spice Collection"
+      ],
+      "h2_count": 8,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/upscaled-spice-frame.webp",
+          "alt": "Artisanal Indian Heritage Spice Frame",
+          "width": "1200",
+          "height": "896",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/sensory/clove.webp",
+          "alt": "Sensory Clove Botanical Texture",
+          "width": "2752",
+          "height": "1536",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/bukanu.webp",
+          "alt": "Majestic Essence Bukanu Premium Herbal Digestive Blend packaging box",
+          "width": "1024",
+          "height": "858",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/bukanu.webp",
+          "alt": "Majestic Essence Bukanu Premium Herbal Digestive Blend 100g pack",
+          "width": "1024",
+          "height": "858",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/moringa.webp",
+          "alt": "Majestic Essence Moringa Leaf Powder 100g pack",
+          "width": "1312",
+          "height": "1199",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/ajwain.webp",
+          "alt": "Majestic Essence Ajwain Carom Seeds 100g pack",
+          "width": "1254",
+          "height": "1254",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/kalonji.webp",
+          "alt": "Majestic Essence Kalonji Nigella Seeds 100g pack",
+          "width": "1371",
+          "height": "1147",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/curry-leaves.webp",
+          "alt": "Majestic Essence Dried Curry Leaves 100g pack",
+          "width": "1371",
+          "height": "1148",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/products/kasuri-methi.webp",
+          "alt": "Majestic Essence Kasuri Methi 100g pack",
+          "width": "1254",
+          "height": "1254",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 37,
+      "word_count": 602
+    },
+    "terms.html": {
+      "title": "Terms of Service & Purity Guarantee | Majestic Essence",
+      "meta_desc": "Official Terms of Service for Majestic Essence. Review our 100% Authentic Quality Guarantee, FSSAI compliance, ordering policies, and culinary standards.",
+      "canonical": "https://majestic-essence.com/terms",
+      "h1": [
+        "Terms of Service"
+      ],
+      "h2_count": 9,
+      "images": [
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence Royal Botanical Crest",
+          "width": "44",
+          "height": "28",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/logo-crest.png",
+          "alt": "Majestic Essence",
+          "width": "60",
+          "height": "39",
+          "lazy": "",
+          "has_alt": true
+        },
+        {
+          "src": "images/fssai-logo.png",
+          "alt": "FSSAI Food Safety Logo",
+          "width": "56",
+          "height": "28",
+          "lazy": "lazy",
+          "has_alt": true
+        },
+        {
+          "src": "images/whatsapp-qr.png",
+          "alt": "Scan to chat on WhatsApp",
+          "width": "120",
+          "height": "120",
+          "lazy": "",
+          "has_alt": true
+        }
+      ],
+      "schema_blocks": 1,
+      "internal_links": 26,
+      "word_count": 816
+    }
+  },
+  "total_images": 106,
+  "images_missing_alt": 0,
+  "images_by_type": {},
+  "schema_types": {
+    "Product": 6,
+    "Blog": 1,
+    "ContactPage": 1,
+    "FAQPage": 1,
+    "Organization": 6,
+    "Person": 1,
+    "WebSite": 1,
+    "AboutPage": 1,
+    "WebPage": 3,
+    "ItemList": 1
+  },
+  "internal_links": {},
+  "broken_internal_links": []
+}

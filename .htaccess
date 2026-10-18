@@ -1,0 +1,150 @@
+# ==============================================================================
+# MAJESTIC ESSENCE — Apache / LiteSpeed Server Configuration
+# Authentic Quality, Maximum Speed, Security & Search Engine Optimization
+# ==============================================================================
+
+# 1. PREVENT DIRECTORY BROWSING
+Options -Indexes -MultiViews
+
+# 2. DEFAULT CHARSET & ENCODING
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .htm .css .js .xml .json .webmanifest .txt
+
+# 3. MIME TYPES & CHARSET DECLARATIONS
+<IfModule mod_mime.c>
+  AddType "text/html; charset=UTF-8"          .html .htm
+  AddType "text/css; charset=UTF-8"           .css
+  AddType "application/javascript; charset=UTF-8" .js
+  AddType "application/json; charset=UTF-8"   .json
+  AddType "application/xml; charset=UTF-8"    .xml
+  AddType "text/plain; charset=UTF-8"         .txt
+  AddType image/webp                         .webp
+  AddType application/manifest+json          .webmanifest
+  AddType font/woff2                         .woff2
+  AddType font/woff                          .woff
+  AddType image/svg+xml                      .svg .svgz
+  AddEncoding gzip                           .svgz
+  AddType application/ld+json                .jsonld
+</IfModule>
+
+# 4. REWRITE ENGINE & URL CANONICALIZATION
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Block hidden files and directories (starting with .)
+  RewriteRule "(^|/)\.(?!well-known)" - [F]
+
+  # Enforce Canonical Non-WWW Domain (Redirect www to non-www)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # Enforce HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 301 Redirect old About page to Our Story
+  RewriteRule ^about(\.html)?$ /ourstory [R=301,L,NC]
+
+  # Strip trailing slash from non-directories (e.g., /ourstory/ -> /ourstory)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/+$
+  RewriteRule ^ %1 [R=301,L]
+
+  # Redirect direct .html requests to clean URLs (e.g., /shipping.html -> /shipping)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+  RewriteRule ^ %1 [R=301,L]
+
+  # Clean URLs: Internally map extensionless URLs to .html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([^.]+)$ $1.html [L]
+</IfModule>
+
+# 5. GZIP & BROTLI COMPRESSION (mod_deflate)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/ld+json
+  AddOutputFilterByType DEFLATE application/manifest+json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/eot
+</IfModule>
+
+# 6. BROWSER CACHING (mod_expires & Cache-Control)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML & Feeds (short cache with revalidation)
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType application/ld+json "access plus 1 day"
+  ExpiresByType application/manifest+json "access plus 1 week"
+
+  # Media: Images, Icons, Audio, Video
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+
+  # Web Fonts
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+
+  # CSS & JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# 7. SECURITY & INTEGRITY HEADERS
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing
+  Header set X-Content-Type-Options "nosniff"
+
+  # Clickjacking defense
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # XSS protection filter
+  Header set X-XSS-Protection "1; mode=block"
+
+  # Referrer policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions policy
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Cross-Origin resource sharing for fonts
+  <FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+
+  # Enforce UTF-8 Content-Type on all HTML documents
+  <FilesMatch "\.(html|htm)$">
+    Header set Content-Type "text/html; charset=UTF-8"
+  </FilesMatch>
+</IfModule>
+
+# 8. ERROR DOCUMENTS
+ErrorDocument 404 /404.html

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://webmcp.org/schemas/v1/manifest.json",
+  "name": "Majestic Essence Botanical & Culinary Service",
+  "description": "Direct agentic task discovery for authentic single-origin Indian spices, herbal teas, and Bukanu digestive blends.",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "Majestic Essence",
+    "url": "https://majestic-essence.com",
+    "email": "majesticessence30@gmail.com"
+  },
+  "actions": [
+    {
+      "id": "connect_concierge",
+      "name": "WhatsApp Concierge Ordering & Support",
+      "description": "Initiate order placement, commercial spice dispatch, or customer consultation with Majestic Essence dispatch concierge.",
+      "type": "link",
+      "targetUrl": "https://wa.me/917217362416?text={message}",
+      "parameters": {
+        "message": {
+          "type": "string",
+          "description": "Inquiry text specifying required botanical, weight, or delivery pincode"
+        }
+      }
+    },
+    {
+      "id": "request_sample_kit",
+      "name": "Request Botanical Tasting Kit",
+      "description": "Submit inquiry form for culinary sample kits across all 6 core spices and digestive blends.",
+      "type": "form",
+      "pageUrl": "https://majestic-essence.com/contact.html",
+      "selector": "#contactForm",
+      "fields": ["name", "email", "phone", "spiceInterest", "message"]
+    },
+    {
+      "id": "explore_spices",
+      "name": "Browse Botanical Terroir Catalog",
+      "description": "Explore all 6 single-origin Indian herbs: Bukanu, Moringa, Ajwain, Kalonji, Curry Leaves, and Kasuri Methi.",
+      "type": "navigation",
+      "targetUrl": "https://majestic-essence.com/spices.html"
+    }
+  ]
+}
